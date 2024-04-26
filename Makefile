@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-LIB = ar rcs	#Variable con las instrucciones para crear la libreria
+LIB = ar rcs	#-c crear si no existe; -r insertar files.o; -s indexar la libreria
 RM = rm -f	#Variable borrar archivos
 
 CC = gcc	#Compilador
@@ -19,7 +19,7 @@ CCFLAGS = -Wall -Wextra -Werror 	#Flags del compilador
 NAME = libft.a		#Programa final
 SRC = ft_.c		#Dependencias
 OBJ = $(SRC:.c=.o)	#Dependencias convertidas en objetos
-INCLUDE = libft.h	#???
+INCLUDE = libft.h	#Header con los prototipos de las funciones
 
 BONUSSRC = ft_ft_bonus.c	#Dependencias BONUS
 
