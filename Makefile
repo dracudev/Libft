@@ -17,7 +17,7 @@ CC = gcc	#Compilador
 CCFLAGS = -Wall -Wextra -Werror 	#Flags del compilador
 
 NAME = libft.a		#Programa final
-SRC = ft_strlen.c	#Dependencias
+SRC = ft_strlen.c ft_isalpha.c	#Dependencias
 OBJ = $(SRC:.c=.o)	#Dependencias convertidas en objetos
 INCLUDE = libft.h	#Header con los prototipos de las funciones
 
