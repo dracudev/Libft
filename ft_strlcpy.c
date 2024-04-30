@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/26 20:28:04 by antandre          #+#    #+#             */
-/*   Updated: 2024/04/30 13:45:59 by antandre         ###   ########.fr       */
+/*   Created: 2024/04/29 19:24:01 by antandre          #+#    #+#             */
+/*   Updated: 2024/04/30 13:45:08 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stddef.h>
+#include "libft.h"
+#include <stddef.h>
 
-//FUNCIONES LIBC
-size_t				ft_strlen(const char *s);
-int					ft_isalpha(int c);
-int					ft_isdigit(int c);
-int					ft_isalnum(int c);
-int					ft_isascii(int c);
-int					ft_isprint(int c);
-int					ft_toupper(int c);
-int					ft_tolower(int c);
-size_t				ft_strlcpy(char *dst, const char *src, size_t dsize);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dsize)
+{
+	size_t	ssize;
+	size_t	i;
 
-#endif
+	ssize = ft_strlen(src);
+	dsize = ft_strlen(dst);
+	i = 0;
+	if (dsize < 1)
+		return (ssize);
+	while (dst[i] != '\0' && i < dsize - 1)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (ssize);
+}

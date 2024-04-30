@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   main_strlcpy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/26 20:28:04 by antandre          #+#    #+#             */
-/*   Updated: 2024/04/30 13:45:59 by antandre         ###   ########.fr       */
+/*   Created: 2024/04/30 13:43:24 by antandre          #+#    #+#             */
+/*   Updated: 2024/04/30 13:43:51 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stddef.h>
+int	main(int argc, char **argv)
+{
+	if (argc == 3)
+	{
+		printf("%li", ft_strlcpy(argv[1], argv[2], ft_strlen(argv[1])));
+		printf("%s", argv[1]);
+	}
+}
 
-//FUNCIONES LIBC
-size_t				ft_strlen(const char *s);
-int					ft_isalpha(int c);
-int					ft_isdigit(int c);
-int					ft_isalnum(int c);
-int					ft_isascii(int c);
-int					ft_isprint(int c);
-int					ft_toupper(int c);
-int					ft_tolower(int c);
-size_t				ft_strlcpy(char *dst, const char *src, size_t dsize);
-
-#endif
