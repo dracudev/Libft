@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:28:04 by antandre          #+#    #+#             */
-/*   Updated: 2024/05/01 14:49:24 by antandre         ###   ########.fr       */
+/*   Updated: 2024/05/01 16:26:51 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ size_t				ft_strlcat(char *dst, const char *src, size_t dsize);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strnstr(const char *big,
 						const char *little, size_t len);
+int					ft_atoi(const char *nptr);
 
 #endif
