@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:28:04 by antandre          #+#    #+#             */
-/*   Updated: 2024/05/01 18:00:37 by antandre         ###   ########.fr       */
+/*   Updated: 2024/05/02 18:27:55 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ char				*ft_strnstr(const char *big,
 						const char *little, size_t len);
 int					ft_atoi(const char *nptr);
 char				*ft_strchr(const char *s, int c);
-char        *ft_strrchr(const char *s, int c);
+char				*ft_strrchr(const char *s, int c);
+void				*ft_memset(void *s, int c, size_t n);
 
 #endif
