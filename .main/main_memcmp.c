@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   main_memcmp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/08 13:59:20 by antandre          #+#    #+#             */
-/*   Updated: 2024/05/08 15:05:28 by antandre         ###   ########.fr       */
+/*   Created: 2024/05/08 15:05:50 by antandre          #+#    #+#             */
+/*   Updated: 2024/05/08 15:11:41 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <stdio.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n);
+
+int main(void)
 {
-	const unsigned char	*sptr;
-	unsigned char		ch;
-	size_t				i;
+  char buffer1[] = "CCCC";
+  char buffer2[] = "BBBB";
 
-	sptr = (unsigned char *)s;
-	ch = (unsigned char) c;
-	i = 0;
-	while (i < n)
-	{
-		if (sptr[i] == ch)
-			return ((char *)s + i);
-		i++;
-	}
-	return (0);
+	printf("%i", ft_memcmp(buffer1, buffer2, sizeof(buffer1)));
 }

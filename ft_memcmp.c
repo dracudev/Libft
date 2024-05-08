@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/08 13:59:20 by antandre          #+#    #+#             */
-/*   Updated: 2024/05/08 15:05:28 by antandre         ###   ########.fr       */
+/*   Created: 2024/05/08 14:41:25 by antandre          #+#    #+#             */
+/*   Updated: 2024/05/08 15:01:51 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char	*sptr;
-	unsigned char		ch;
+	const unsigned char	*s1ptr;
+	const unsigned char	*s2ptr;
 	size_t				i;
 
-	sptr = (unsigned char *)s;
-	ch = (unsigned char) c;
 	i = 0;
+	s1ptr = (const unsigned char *)s1;
+	s2ptr = (const unsigned char *)s2;
 	while (i < n)
 	{
-		if (sptr[i] == ch)
-			return ((char *)s + i);
+		if (s1ptr[i] != s2ptr[i])
+			return ((int)(s1ptr[i] - s2ptr[i]));
 		i++;
 	}
 	return (0);
