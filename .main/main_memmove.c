@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   main_memmove.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/07 16:25:41 by antandre          #+#    #+#             */
-/*   Updated: 2024/05/08 12:48:43 by antandre         ###   ########.fr       */
+/*   Created: 2024/05/08 13:39:58 by antandre          #+#    #+#             */
+/*   Updated: 2024/05/08 13:50:00 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n);
+
+int main(void)
 {
-	size_t				i;
-	unsigned char		*destptr;
-	const unsigned char	*srcptr;
+	char source[80] = "This is looooooooooooonger source";
+	char target[80] = "This is the target string";
 
-	if (!dest && !src)
-		return (0);
-	destptr = (unsigned char *)dest;
-	srcptr = (const unsigned char *)src;
-	i = 0;
-	while (i < n)
-	{
-		destptr[i] = srcptr[i];
-		i++;
-	}
-	return (dest);
+  printf( "Before memmove, target is \"%s\"\n", target );
+  ft_memmove( target, source, sizeof(source));
+  printf( "After memmove, target becomes \"%s\"\n", target );
 }
+
