@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   main_strdup.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 18:31:20 by antandre          #+#    #+#             */
-/*   Updated: 2024/05/22 11:58:27 by antandre         ###   ########.fr       */
+/*   Created: 2024/05/22 11:25:46 by antandre          #+#    #+#             */
+/*   Updated: 2024/05/22 11:28:34 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stddef.h>
+#include <stdio.h>
 
-/*
- * Borra los datos en los n bytes de memoria empezando desde la posición
- * indicada por s, escribiendo ceros ('\0').
- */
+char	*ft_strdup(const char *s);
 
-void	ft_bzero(void *s, size_t n)
+int	main(void)
 {
-	char	*str;
-	size_t	i;
+	const char	*s;
+	char *copy;
 
-	str = (char *)s;
-	i = 0;
-	while (i < n)
-	{
-		str[i] = '\0';
-		i++;
-	}
+	s = "Hola como estas";
+	copy = ft_strdup(s);
+	printf("%s", copy);
 }
