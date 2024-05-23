@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 11:33:06 by antandre          #+#    #+#             */
-/*   Updated: 2024/05/23 12:31:25 by antandre         ###   ########.fr       */
+/*   Updated: 2024/05/23 13:53:16 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,15 @@ size_t	ft_strlen(const char *s);
  * del substring será 0.
  * Si la longitud del substring es mayor que la longitud de s, se iguala
  * la longitud del substring a s.
- */ 
+ */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-
 	char	*sub;
 	size_t	i;
-	
+
 	if (s == NULL)
-		return(NULL);
+		return (NULL);
 	if (start > ft_strlen(s))
 		len = 0;
 	if (len > ft_strlen(s))

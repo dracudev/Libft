@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 16:25:41 by antandre          #+#    #+#             */
-/*   Updated: 2024/05/22 12:00:18 by antandre         ###   ########.fr       */
+/*   Updated: 2024/05/23 13:51:26 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
  * Copia n bytes del area de memoria src al area de memoria dest.
  * No debe existir solapamiento. Devuelve un puntero a dest.
- */ 
+ */
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
