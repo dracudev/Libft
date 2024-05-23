@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:28:04 by antandre          #+#    #+#             */
-/*   Updated: 2024/05/21 19:38:02 by antandre         ###   ########.fr       */
+/*   Updated: 2024/05/23 12:33:21 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,7 @@ void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_calloc(size_t count, size_t size);
+char				*ft_strdup(const char *s);
+char				*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
