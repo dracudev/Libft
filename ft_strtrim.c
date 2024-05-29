@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 13:49:36 by antandre          #+#    #+#             */
-/*   Updated: 2024/05/28 11:19:46 by antandre         ###   ########.fr       */
+/*   Updated: 2024/05/28 12:02:45 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,12 @@ char	*ft_strchr(const char *s, int c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dsize);
 
 /*
- *
+ * Elimina todos los carácteres de la string set desde el principio y desde
+ * el final en s1, hasta encontrar un caracter no perteneciente a set.
+ * Creamos dos bucles que iteran desde el inicio y el final buscando todas
+ * las coincidencias de caracteres.
+ * Reservamos espacio con malloc y copiamos en str el valor de s1 recortando
+ * el inicio y final de caracteres coincidentes.
  */ 
 
 char	*ft_strtrim(char const *s1, char const *set)
