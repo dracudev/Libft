@@ -25,15 +25,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dsize);
  * las coincidencias de caracteres.
  * Reservamos espacio con malloc y copiamos en str el valor de s1 recortando
  * el inicio y final de caracteres coincidentes.
- */ 
+ */
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-
-	char *str;
+	char	*str;
 	size_t	start;
 	size_t	end;
-	
+
 	str = 0;
 	if (s1 != 0 && set != 0)
 	{

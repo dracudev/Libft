@@ -32,23 +32,23 @@ el valor de 'count', que representa el número total de palabras encontradas.
 
 static int	count_words(char const *s, char c)
 {
-    int	count;
-    int	i;
+	int	count;
+	int	i;
 
-    count = 0;
-    i = 0;
-    while (s[i])
-    {
-        if (s[i] != c)
-        {
-            count++;
-            while (s[i] && s[i] != c)
-                i++;
-        }
-        else
-            i++;
-    }
-    return (count);
+	count = 0;
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] != c)
+		{
+			count++;
+			while (s[i] && s[i] != c)
+				i++;
+		}
+		else
+			i++;
+	}
+	return (count);
 }
 
 /*
@@ -71,18 +71,37 @@ llamada a get_next_word comience desde la posición correcta en la cadena.
 
 static char	*get_next_word(char const *s, char c, int *start)
 {
-    int		i;
-    char	*word;
+	int		i;
+	char	*word;
 
-    i = *start;
-    while (s[i] && s[i] == c)
-        i++;
-    *start = i;
-    while (s[i] && s[i] != c)
-        i++;
-    word = ft_substr(s, *start, i - *start);
-    *start = i;
-    return (word);
+	i = *start;
+	while (s[i] && s[i] == c)
+		i++;
+	*start = i;
+	while (s[i] && s[i] != c)
+		i++;
+	word = ft_substr(s, *start, i - *start);
+	*start = i;
+	return (word);
+}
+
+/*
+Función para liberar la memoria asignada para las palabras
+en el array 'result' en caso de que ocurra un error al obtener
+una palabra.
+*/
+
+static void	free_result(char **result)
+{
+	int	i;
+
+	i = 0;
+	while (result[i])
+	{
+		free(result[i]);
+		i++;
+	}
+	free(result);
 }
 
 /*
@@ -113,31 +132,28 @@ marcar el final del arreglo.
 
 char	**ft_split(char const *s, char c)
 {
-    char	**result;
-    int		word_count;
-    int		i;
-    int		start;
+	char	**result;
+	int		word_count;
+	int		i;
+	int		start;
 
-    if (!s)
-        return (NULL);
-    word_count = count_words(s, c);
-    result = (char **)malloc((word_count + 1) * sizeof(char *));
-    if (!result)
-        return (NULL);
-    i = 0;
-    start = 0;
-    while (i < word_count)
-    {
-        result[i] = get_next_word(s, c, &start);
-        if (!result[i])
-        {
-            while (i >= 0)
-                free(result[i--]);
-            free(result);
-            return (NULL);
-        }
-        i++;
-    }
-    result[i] = NULL;
-    return (result);
+	if (!s)
+		return (NULL);
+	word_count = count_words(s, c);
+	result = (char **)malloc((word_count + 1) * sizeof(char *));
+	if (!result)
+		return (NULL);
+	i = 0;
+	start = 0;
+	while (i < word_count)
+	{
+		result[i] = get_next_word(s, c, &start);
+		if (!result[i])
+		{
+			free_result(result);
+		}
+		i++;
+	}
+	result[i] = NULL;
+	return (result);
 }
