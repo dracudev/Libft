@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
@@ -6,9 +6,9 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 11:33:06 by antandre          #+#    #+#             */
-/*   Updated: 2024/05/23 13:53:16 by antandre         ###   ########.fr       */
+/*   Updated: 2024/06/04 16:50:58 by antandre         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 #include <stddef.h>
 #include <stdlib.h>
@@ -17,14 +17,15 @@
 size_t	ft_strlen(const char *s);
 
 /*
- * Reserva memoria con malloc() y devuelve una substring de la string s
- * comenzando desde el índice start con una longitud máxima de len.
- * Si s esta vacío devuelve NULL.
- * Si el índice de inicio es mayor que la longitud de s, la longitud
- * del substring será 0.
- * Si la longitud del substring es mayor que la longitud de s, se iguala
- * la longitud del substring a s.
- */
+Reserva memoria con malloc() y devuelve una substring de la string s
+comenzando desde el índice start con una longitud máxima de len.
+
+Si s esta vacío devuelve NULL.
+Si el índice de inicio es mayor que la longitud de s, la longitud
+del substring será 0.
+Si la longitud del substring es mayor que la longitud de s, se iguala
+la longitud del substring a s.
+*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
