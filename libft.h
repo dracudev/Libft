@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
@@ -6,9 +6,9 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:28:04 by antandre          #+#    #+#             */
-/*   Updated: 2024/05/28 11:53:30 by antandre         ###   ########.fr       */
+/*   Updated: 2024/06/04 16:54:51 by antandre         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -43,5 +43,6 @@ char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
+char    			*ft_itoa(int n);
 
 #endif
