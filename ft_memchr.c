@@ -13,8 +13,8 @@
 #include <stddef.h>
 
 /*
- * Escanea hasta n bytes del string s buscando la primera coincidencia 
- * del caracter c. Retorna un puntero a la coincidencia o NULL.
+ * Scans up to n bytes of the string s for the first occurrence of 
+ * the character c. Returns a pointer to the match or NULL.
  */
 
 void	*ft_memchr(const void *s, int c, size_t n)

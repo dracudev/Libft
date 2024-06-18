@@ -12,6 +12,13 @@
 
 #include <stddef.h>
 
+/*
+ * Locates the first occurrence of the null-terminated string big
+ * within the first n bytes of the null-terminated string little.
+ * Returns a pointer to the located substring,
+ * or NULL if the substring is not found.
+ */
+
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;

@@ -13,8 +13,7 @@
 #include <unistd.h>
 
 /*
-Envía el carácter ’c’ al file descriptor
-especificado.
+Sends the character 'c' to the specified file descriptor.
 */
 
 void	ft_putchar_fd(char c, int fd)

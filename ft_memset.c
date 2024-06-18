@@ -10,12 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stddef.h>
 
 /*
- * Rellena los primeros n bytes del área de memoria apuntada por s
- * con el byte constante c. Devuelve un puntero al área de memoria s.
+ * Fills the first n bytes of the memory area pointed to by s
+ * with the constant byte c. Returns a pointer to the memory area s.
  */
 
 void	*ft_memset(void *s, int c, size_t n)

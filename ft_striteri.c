@@ -10,21 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 /*
-A cada carácter de la string ’s’, aplica la función
-’f’ dando como parámetros el índice de cada
-carácter dentro de ’s’ y la dirección del propio
-carácter, que podrá modificarse si es necesario.
-No retorna nada.
-*/
+ * Applies the function 'f' to each character of the string 's',
+ * providing as parameters the index of each character within 's'
+ * and the address of character itself, which can be modified if necessary.
+ * It does not return anything.
+ */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
-	if (s == NULL)
+	if (!s)
 		return ;
 	i = 0;
 	while (s[i])

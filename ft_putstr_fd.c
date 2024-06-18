@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
+
+/* Sends the string 's' to the specified file descriptor. */
 
 void	ft_putstr_fd(char *s, int fd)
 {

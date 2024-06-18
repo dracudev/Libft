@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+ * returns a pointer to the last occurrence of 'c' in the string s.
+ */
+
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;

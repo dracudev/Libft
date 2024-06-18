@@ -14,14 +14,10 @@
 #include "libft.h"
 #include <stddef.h>
 
-size_t	ft_strlen(const char *s);
-size_t	ft_strlcat(char *dst, const char *src, size_t dsize);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dsize);
-
 /*
- * Reserva memoria con malloc() y devuelve un nuevo string formado por la
- * concatenación de s1 y s2.
- * Copiamos s1 al string nuevo y despues le concatenamos s2.
+ * Allocates memory using malloc() and returns a new string formed by
+ * concatenating s1 and s2.
+ * Copies s1 to the new string and then concatenates s2 to it.
  */
 
 char	*ft_strjoin(char const *s1, char const *s2)

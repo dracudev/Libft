@@ -14,13 +14,11 @@
 #include <stdlib.h>
 #include "libft.h"
 
-/* 
- * Devuelve un puntero a una nueva cadena de caracteres que es un duplicado
- * de la cadena apuntada por s. La memoria para la nueva cadena se obtiene
- * automáticamente con malloc().
+/*
+ * Returns a pointer to a new string that is a duplicate
+ * of the string pointed to by s. Memory for the new string is allocated
+ * automatically using malloc().
  */
-
-size_t	ft_strlen(const char *s);
 
 char	*ft_strdup(const char *s)
 {

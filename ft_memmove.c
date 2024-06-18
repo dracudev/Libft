@@ -14,10 +14,10 @@
 #include "libft.h"
 
 /*
- * Igual que memcpy pero tiene en cuenta el solapamiento.
- * Copia n bytes del area de memoria src al area de memoria dest.
- * Para evitar solapamiento cuando src es menor que dest: comenzamos 
- * a copiar los bytes desde el final
+ * Same as memcpy but accounts for overlap.
+ * Copies n bytes from the memory area src to the memory area dest.
+ * To avoid overlap when src is less than dest: we start
+ * copying the bytes from the end.
  */
 
 void	*ft_memmove(void *dest, const void *src, size_t n)

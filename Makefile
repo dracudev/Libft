@@ -1,52 +1,42 @@
-#******************************************************************************#
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: antandre <antandre@student.42barcel>       +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/26 18:16:31 by antandre          #+#    #+#              #
-#    Updated: 2024/06/04 16:55:10 by antandre         ###   ########.fr        #
-#                                                                              #
-#******************************************************************************#
+LIB = ar rcs
+RM = rm -f
 
-LIB = ar rcs	#-c crear si no existe; -r insertar files.o; -s indexar la libreria
-RM = rm -f	#Variable borrar archivos
+CC = gcc
+CCFLAGS = -Wall -Wextra -Werror
 
-CC = gcc	#Compilador
-CCFLAGS = -Wall -Wextra -Werror 	#Flags del compilador
-
-NAME = libft.a		#Programa final
+NAME = libft.a
 SRC = ft_strlen.c ft_isalpha.c ft_isalnum.c ft_isascii.c ft_isdigit.c\
 ft_isprint.c ft_toupper.c ft_tolower.c ft_strlcpy.c ft_strlcat.c ft_strncmp.c\
 ft_strnstr.c ft_atoi.c ft_strchr.c ft_strrchr.c ft_memset.c ft_bzero.c ft_memcpy.c\
 ft_memmove.c ft_memchr.c ft_memcmp.c ft_calloc.c ft_strdup.c ft_substr.c\
 ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c\
-ft_putchar_fd.c ft_putstr.fd.c ft_putendl_fd.c ft_putnbr_fd.c
-OBJ = $(SRC:.c=.o)	#Dependencias convertidas en objetos
-INCLUDE = libft.h	#Header con los prototipos de las funciones
+ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+OBJ = $(SRC:.c=.o)
+INCLUDE = libft.h
 
-BONUSSRC = ft_ft_bonus.c	#Dependencias BONUS
+BONUSSRC =
 
-BONUSOBJ = $(BONUSSRC:.c=.o)	#Dependencias BONUS convertidas en objetos
+BONUSOBJ = $(BONUSSRC:.c=.o)
 
-all: $(NAME)	#Reglas que deben cumplirse durante el make
+.PHONY: all clean fclean re bonus
 
-$(NAME): $(OBJ) $(INCLUDE)	#Dependencias .o + libft.h
-	$(LIB) $(NAME) $(OBJ)	#Instrucciones (ar rcs libft.a obj1.o obj2.o)
+all: $(NAME)
+
+$(NAME): $(OBJ) $(INCLUDE)
+	$(LIB) $(NAME) $(OBJ)
 
 bonus: $(OBJ) $(BONUSOBJ) $(INCLUDE)
 	$(LIB) $(NAME) $(BONUSOBJ) $(OBJ)
 
 %.o: %.c
-	$(CC) $(CCFLAGS) -c -o $@ $<	#Instrucciones para compilar archivos .c en .o
+	$(CC) $(CCFLAGS) -c -o $@ $<
 
 clean:
-	$(RM) $(OBJ) $(BONUSOBJ)	#make clean --> rm -f *.o
+	$(RM) $(OBJ) $(BONUSOBJ)
 
-fclean: clean				#make fclean +--> rm -f libft.a
+fclean: clean
 	$(RM) $(NAME)
 
-re: fclean all				#make re ++--> rm -f all
+re: fclean all
 
 rebonus: fclean bonus

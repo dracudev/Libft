@@ -10,16 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
 
 /*
-'get_num_len' es una función auxiliar que se utiliza para obtener
-la longitud de un número entero 'n'.
-
-1. En caso de que el número sea negativo se incrementa la len en 1 para
-tener en cuenta el signo negativo y se convierte el numero en positivo.
-*/
+ * 'get_num_len' is a helper function used to obtain
+ * the length of an integer 'n'.
+ *
+ * If the number is negative, the length is incremented by 1 to account
+ * for the negative sign, and the number is converted to positive.
+ */
 
 static int	get_num_len(int n)
 {
@@ -42,20 +41,15 @@ static int	get_num_len(int n)
 }
 
 /*
-'ft_itoa' convierte un número entero 'n' en una cadena de caracteres.
-
-1. Se obtiene la longitud del número entero 'n' y se asigna memoria
-
-2. Se verifica si el número es 0, si es así se asigna '0' a la cadena
-
-3. Se verifica si el número es negativo, si es así se asigna '-' a la cadena
-4. Se convierte el número en positivo
-
-5. 'While' donde se obtiene el último dígito del número y se asigna al
-último indice de la cadena, convertido en ASCII ('0' + n % 10)
-
-6. Se divide el número por 10 para obtener el siguiente dígito
-*/
+ * 'ft_itoa' converts an integer 'n' into a character string.
+ * 1. The length of the integer 'n' is obtained and memory is allocated.
+ * 2. It checks if the number is 0, and if so, assigns '0' to the string.
+ * 3. It checks if the number is negative, and if so, assigns '-' to string.
+ * 4. The number is converted to positive.
+ * 5. A 'while' loop is used to get the last digit of the number and assign
+ * it to the last index of the string, converted to ASCII ('0' + n % 10).
+ * 6. The number is divided by 10 to get the next digit.
+ */
 
 char	*ft_itoa(int n)
 {

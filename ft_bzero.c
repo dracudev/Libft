@@ -10,12 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stddef.h>
 
 /*
- * Borra los datos en los n bytes de memoria empezando desde la posición
- * indicada por s, escribiendo ceros ('\0').
+ * Erases the data in the n bytes of memory starting from the position
+ * pointed to by s, by writing zeros ('\0').
  */
 
 void	ft_bzero(void *s, size_t n)

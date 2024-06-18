@@ -13,6 +13,12 @@
 #include "libft.h"
 #include <stddef.h>
 
+/*
+ * Concatenates two strings with size limiting to prevent buffer overflow.
+ * Appends the null-terminator to ensure proper string termination.
+ * Return the total length of the string tried to create.
+ */
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 {
 	size_t	i;

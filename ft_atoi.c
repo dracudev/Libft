@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+ * The atoi() function converts the initial portion of the string pointed
+ * to by nptr to int. Return the converted value or 0 on error.
+ */
+
 int	ft_atoi(const char *nptr)
 {
 	int	sign;

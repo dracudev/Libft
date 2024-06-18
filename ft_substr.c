@@ -14,18 +14,15 @@
 #include <stdlib.h>
 #include "libft.h"
 
-size_t	ft_strlen(const char *s);
-
 /*
-Reserva memoria con malloc() y devuelve una substring de la string s
-comenzando desde el índice start con una longitud máxima de len.
-
-Si s esta vacío devuelve NULL.
-Si el índice de inicio es mayor que la longitud de s, la longitud
-del substring será 0.
-Si la longitud del substring es mayor que la longitud de s, se iguala
-la longitud del substring a s.
-*/
+ * Allocates memory with malloc() and returns a substring of the string s,
+ * starting from index start with a maximum length of len.
+ * Returns NULL if s is empty.
+ * If the start index is greater than the length of s,
+ * the substring length will be 0.
+ * If the substring length is greater than the length of s,
+ * the substring length is set to s's length.
+ */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

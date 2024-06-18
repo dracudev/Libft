@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+ * Returns a pointer to the first occurrence of 'c' in the string s.
+ */
+
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)

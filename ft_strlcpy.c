@@ -13,6 +13,12 @@
 #include "libft.h"
 #include <stddef.h>
 
+/*
+ * Copies a string with size limiting to prevent buffer overflow.
+ * Ensures the destination string is null-terminated.
+ * Return the total length of the string they tried.
+ */
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t dsize)
 {
 	size_t	slen;

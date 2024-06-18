@@ -10,9 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stddef.h>
-#include "libft.h"
+
+/*
+ * Computes the length of a null-terminated string.
+ */
 
 size_t	ft_strlen(const char *s)
 {

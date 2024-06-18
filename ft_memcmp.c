@@ -13,8 +13,8 @@
 #include <stddef.h>
 
 /*
- * Compara los primeros n bytes del area de memoria s1 y s2.
- * Retorna un integer less than, equal or greater than 0. 
+ * Compares the first n bytes of the memory areas s1 and s2.
+ * Returns an integer less than, equal to, or greater than 0.
  */
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

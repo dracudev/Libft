@@ -14,13 +14,13 @@
 #include <stdlib.h>
 #include "libft.h"
 
-/* 
- * La función actúa igual que malloc pero añadiendo tres verificaciones
- * de errores e inicializando los bytes en 0.
- * Si count o size son 0, asignamos 1 byte de memoria para devolver un 
- * puntero no nulo que pueda ser pasado a free().
- * Si hay integer overflow devolvemos un error.
-*/
+/*
+ * The function acts like malloc but with three error checks
+ * and initializes the bytes to 0.
+ * If count or size is 0, we allocate 1 byte of memory to return a 
+ * non-null pointer that can be passed to free().
+ * If there is an integer overflow, it returns an error.
+ */
 
 void	*ft_calloc(size_t count, size_t size)
 {

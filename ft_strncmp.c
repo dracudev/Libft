@@ -12,6 +12,13 @@
 
 #include <stddef.h>
 
+/*
+ * Compares the first n bytes of two strings.
+ * Returns an integer less than, equal to, or greater than 0
+ * if the first n bytes of s1 are found, respectively,
+ * to be less than, to match, or be greater than the first n bytes of s2.
+ */
+
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

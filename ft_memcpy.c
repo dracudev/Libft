@@ -13,8 +13,8 @@
 #include <stddef.h>
 
 /*
- * Copia n bytes del area de memoria src al area de memoria dest.
- * No debe existir solapamiento. Devuelve un puntero a dest.
+ * Copies n bytes from the memory area src to the memory area dest.
+ * Overlap must not occur. Returns a pointer to dest.
  */
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)

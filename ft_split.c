@@ -14,21 +14,17 @@
 #include <stdlib.h>
 
 /*
-1. 'while' se ejecutará hasta que se alcance el final de la cadena 's' 
-
-2. Dentro del bucle, se verifica si el carácter actual 's[i]'
-es diferente del carácter delimitador 'c'.
-
-3. Si 's[i]' no es igual a 'c', significa que se ha encontrado una palabra.
-incrementa 'count' en 1 y luego avanza 'i' hasta el siguiente carácter
-que no sea 'c' o hasta el final de la cadena.
-
-4. Si 's[i]' es igual a 'c', significa que se ha encontrado 
-un carácter delimitador, se avanza 'i' al siguiente carácter.
-
-5. Una vez que se ha recorrido toda la cadena 's', se devuelve 
-el valor de 'count', que representa el número total de palabras encontradas.
-*/
+ * 1. 'while' will execute until the end of the string 's' is reached.
+ * 2. Inside the loop, it checks if the current character 's[i]'
+ *    is different from the delimiter character 'c'.
+ * 3. If 's[i]' is not equal to 'c', it means a word has been found.
+ *    Increment 'count' by 1 and then move 'i' to the next character
+ *    that is not 'c' or to the end of the string.
+ * 4. If 's[i]' is equal to 'c', it means delimiter character has been found.
+ *    Move 'i' to the next character.
+ * 5. Once the entire string 's' has been traversed, return
+ *    the value of 'count', which represents the total number of words found.
+ */
 
 static int	count_words(char const *s, char c)
 {
@@ -52,22 +48,17 @@ static int	count_words(char const *s, char c)
 }
 
 /*
-1. Inicializa una variable i con el valor de *start. Esto se hace para
-asegurarse de que la búsqueda de la siguiente palabra comience desde
-la posición correcta en la cadena.
-
-2. 'while' para omitir cualquier delimitador 'c' al comienzo de la palabra.
-
-3. Después del bucle, 'i' apuntará al primer carácter de la siguiente
-palabra en la cadena. Guardamos su valor en 'start.
-
-4. Otro 'while' para encontrar el final de la palabra ('/0' o c).
-
-5. ft_substr para extraer la palabra de la cadena 's'.
-
-6. Se actualiza el valor de '*start' con el valor de 'i', para que la próxima
-llamada a get_next_word comience desde la posición correcta en la cadena.
-*/
+ * 1. Initialize a variable i with the value of *start. This is done to
+ *    ensure that the search for the next word starts from
+ *    the correct position in the string.
+ * 2. 'while' loop to skip any delimiter 'c' at the beginning of the word.
+ * 3. After the loop, 'i' will point to the first character of the next
+ *    word in the string. Save its value in 'start'.
+ * 4. Another 'while' loop to find the end of the word ('\0' or 'c').
+ * 5. Use ft_substr to extract the word from the string 's'.
+ * 6. Update the value of '*start' with the value of 'i', so that the next
+ *    call to get_next_word starts from the correct position in the string.
+ */
 
 static char	*get_next_word(char const *s, char c, int *start)
 {
@@ -86,10 +77,10 @@ static char	*get_next_word(char const *s, char c, int *start)
 }
 
 /*
-Función para liberar la memoria asignada para las palabras
-en el array 'result' en caso de que ocurra un error al obtener
-una palabra.
-*/
+ * Function to free the memory allocated for the words
+ * in the 'result' array in case an error occurs while getting
+ * a word.
+ */
 
 static void	free_result(char **result)
 {
@@ -105,30 +96,25 @@ static void	free_result(char **result)
 }
 
 /*
-Dividir una cadena de caracteres en palabras separadas por un 
-carácter delimitador.
-
-1. Se verifica si la cadena de caracteres 's' es nula. Si es así,
-la función devuelve NULL para indicar un error.
-
-2. Función 'count_words' para contar el número de palabras en la cadena 's'.
-
-3. Se asigna memoria para el array 'result' utilizando la función malloc.
-
-4. 'while' que se ejecuta word_count veces. En cada iteración:
-
-Función 'get_next_word' para obtener la siguiente palabra de la cadena 's'.
-Si devuelve NULL, significa que ocurrió un error al obtener la palabra. 
-En este caso, se libera la memoria asignada para las palabras anteriores 
-y para el arreglo result, y se devuelve NULL para indicar un error.
-
-Si devuelve una palabra válida, se asigna esa palabra al elemento result[i]
-del array.
-Se incrementa el contador 'i' para pasar a la siguiente posición del array.
-
-5. Se asigna NULL al último elemento del arreglo result para
-marcar el final del arreglo.
-*/
+ * Split a string into words separated by a delimiter character.
+ * 1. Check if the string 's' is NULL. If so,
+ *    the function returns NULL to indicate an error.
+ * 2. Use the 'count_words' function to count the number of words
+ * in the string 's'.
+ * 3. Allocate memory for the 'result' array using the malloc function.
+ * 4. 'while' loop that executes word_count times. In each iteration:
+ * - Use the 'get_next_word' function to retrieve the next word from 
+ *   the string 's'.
+ * - If it returns NULL, it indicates an error occurred while 
+ *   fetching the word.
+ *   In this case, free the memory allocated for previous words 
+ *   and for the 'result'array, and return NULL to indicate an error.
+ * - If it returns a valid word, assign that word to the result[i]
+ *   element of the array.
+ * - Increment the counter 'i' to move to the next position in the array.
+ * 5. Assign NULL to the last element of the 'result' array to
+ *    mark the end of the array.
+ */
 
 char	**ft_split(char const *s, char c)
 {

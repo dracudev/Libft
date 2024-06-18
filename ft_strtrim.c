@@ -14,17 +14,13 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-size_t	ft_strlen(const char *s);
-char	*ft_strchr(const char *s, int c);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dsize);
-
 /*
- * Elimina todos los carácteres de la string set desde el principio y desde
- * el final en s1, hasta encontrar un caracter no perteneciente a set.
- * Creamos dos bucles que iteran desde el inicio y el final buscando todas
- * las coincidencias de caracteres.
- * Reservamos espacio con malloc y copiamos en str el valor de s1 recortando
- * el inicio y final de caracteres coincidentes.
+ * Eliminates all characters from the string 'set' at the beginning and 
+ * end of 's1' until a character not belonging to 'set' is encountered.
+ * It creates two loops that iterate from the start and end, removing
+ * all matching characters.
+ * Memory is allocated with malloc and the value of 's1' is copied to 'str', 
+ * trimming the leading and trailing matching characters.
  */
 
 char	*ft_strtrim(char const *s1, char const *set)
