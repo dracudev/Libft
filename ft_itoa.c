@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 17:48:34 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/04 19:50:29 by antandre         ###   ########.fr       */
+/*   Updated: 2024/06/19 13:36:10 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,21 @@ static int	get_num_len(int n)
 	int	len;
 
 	len = 0;
-	if (n == 0)
-		return (1);
-	if (n < 0)
+	if (n != 0)
 	{
-		len++;
-		n *= -1;
+		if (n < 0)
+		{
+			n *= -1;
+			len++;
+		}
+		while (n != 0)
+		{
+			n /= 10;
+			len++;
+		}
 	}
-	while (n > 0)
-	{
-		len++;
-		n /= 10;
-	}
+	else
+		len = 1;
 	return (len);
 }
 
@@ -53,28 +56,28 @@ static int	get_num_len(int n)
 
 char	*ft_itoa(int n)
 {
-	int		len;
-	char	*str;
+	int			len;
+	char		*str;
+	long int	nbr;
 
 	len = get_num_len(n);
+	nbr = n;
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
-		return (NULL);
-	str[len] = '\0';
-	if (n == 0)
-	{
+		return (0);
+	str[len--] = '\0';
+	if (nbr == 0)
 		str[0] = '0';
-		return (str);
-	}
-	if (n < 0)
+	if (nbr < 0)
 	{
 		str[0] = '-';
-		n *= -1;
+		nbr = -nbr;
 	}
-	while (n > 0)
+	while (nbr)
 	{
-		str[--len] = (n % 10) + '0';
-		n /= 10;
+		str[len] = (nbr % 10) + '0';
+		nbr /= 10;
+		len--;
 	}
 	return (str);
 }
