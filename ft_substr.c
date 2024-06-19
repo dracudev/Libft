@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 11:33:06 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/04 16:50:58 by antandre         ###   ########.fr       */
+/*   Updated: 2024/06/19 16:59:28 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
  * Returns NULL if s is empty.
  * If the start index is greater than the length of s,
  * the substring length will be 0.
- * If the substring length is greater than the length of s,
- * the substring length is set to s's length.
+ * If the substring length is greater than the length of 's' from 'start',
+ * the substring length is set to s - start length to not exceed limit.
  */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -33,8 +33,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start > ft_strlen(s))
 		len = 0;
-	if (len > ft_strlen(s))
-		len = ft_strlen(s);
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	sub = (char *)malloc((len + 1) * sizeof(char));
 	if (sub == NULL)
 		return (NULL);
