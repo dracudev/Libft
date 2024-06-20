@@ -6,13 +6,19 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:28:14 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/17 17:27:18 by antandre         ###   ########.fr       */
+/*   Updated: 2024/06/20 14:05:59 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 //FUNCIONES LIBC
 size_t				ft_strlen(const char *s);
@@ -54,5 +60,6 @@ void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
 //FUNCIONES BONUS
+t_list				*ft_lstnew(void *content);
 
 #endif
