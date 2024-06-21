@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 11:10:12 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/21 15:06:53 by antandre         ###   ########.fr       */
+/*   Created: 2024/06/21 11:05:54 by antandre          #+#    #+#             */
+/*   Updated: 2024/06/21 15:31:57 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 /*
- * Create a new node using malloc(3). The content member variable
- * is initialized with the content of the content parameter.
- * The next variable is initialized with NULL.
+ * Add the node 'new' to the beginning of the list 'lst'.
+ * The 'next' node of 'new' points to the node that was previously the
+ * first node of the list because 'new' is placed in front of it.
+ * The list 'lst' should now point to its first node, which is 'new'.
  */
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*node;
-
-	node = (t_list *)malloc(sizeof(t_list));
-	if (!node)
-		return (0);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
