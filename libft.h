@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:28:14 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/21 12:46:08 by antandre         ###   ########.fr       */
+/*   Updated: 2024/06/23 14:42:32 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void				ft_putnbr_fd(int n, int fd);
 
 //FUNCIONES BONUS
 t_list				*ft_lstnew(void *content);
-
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void				ft_lstadd_front(t_list **lst, t_list *new);
+int					ft_lstsize(t_list *lst);
 
 #endif
