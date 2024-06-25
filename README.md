@@ -32,6 +32,14 @@ This repository contains a custom static library wich provdes various utility fu
    ```bash
    gcc -o my_program my_program.c -L. -lft -I.
 
+# Function Index
+
+1. [Character Handling Functions](#character-handling-functions)
+2. [String Manipulation Functions](#string-manipulation-functions)
+3. [Memory Management Functions](#memory-management-functions)
+4. [File Operations Functions](#file-operations-functions)
+5. [Linked List Functions](#linked-list-functions)
+
 ## Functions Overview
 
 ### Character Handling Functions
@@ -100,7 +108,7 @@ This repository contains a custom static library wich provdes various utility fu
   // Now `lowercase` should contain 'a'
 
 
-### String Functions
+### String Manipulation Functions
 
 #### [`ft_strchr.c`](ft_strchr.c)
 - **Description:** Locates the first occurrence of a character in a string.
@@ -416,7 +424,7 @@ This repository contains a custom static library wich provdes various utility fu
   }
 
 
-### I/O Functions
+### File Operations Functions
 
 #### [`ft_putchar_fd.c`](ft_putchar_fd.c)
 - **Description:** Writes the character `c` to the file descriptor `fd`.
@@ -471,7 +479,6 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("Memory allocation failed.\n");
   }
-
 
 #### [`ft_lstadd_front.c`](ft_lstadd_front.c)
 - **Description:** Adds the element `new_node` at the beginning of the linked list `lst`.
