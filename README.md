@@ -32,7 +32,7 @@ This repository contains a custom static library wich provdes various utility fu
    ```bash
    gcc -o my_program my_program.c -L. -lft -I.
 
-# Function Index
+## Function Index
 
 1. [Character Handling Functions](#character-handling-functions)
 2. [String Manipulation Functions](#string-manipulation-functions)
