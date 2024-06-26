@@ -1,0 +1,89 @@
+ft_memset:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_bzero:      [OK] [OK] [TIMEOUT] [OK] Test code:
+	ft_bzero(((void*)0), 0x12);
+
+
+ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memcmp:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [TIMEOUT] Test code:
+	char b1[] = "nyancat";
+
+	ft_memcmp(b1, ((void*)0), 4);
+
+
+ft_strlen:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_isalpha:    [OK] 
+ft_isdigit:    [OK] 
+ft_isalnum:    [OK] 
+ft_isascii:    [OK] 
+ft_isprint:    [OK] 
+ft_toupper:    [OK] 
+ft_tolower:    [OK] 
+ft_strchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] 
+[no crash]: your strchr does not segfault with NULL parameter
+Test code:
+	ft_strchr(((void*)0), '\0');
+
+
+ft_strrchr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] 
+[no crash]: your strrchr does not segfault when a null parameter is sent
+Test code:
+	ft_strrchr(((void*)0), '\0');
+
+
+ft_strncmp:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [TIMEOUT] Test code:
+	ft_strncmp("nope", ((void*)0), 3);
+
+	ft_strncmp(((void*)0), ((void*)0), 3);
+
+
+ft_strlcpy:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strlcat:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [CRASH] 
+[crash]: your strlcat crush when null parameter is sent with a size of 0
+Test code:
+	char b[0xF] = "nyan !";
+
+	ft_strlcat(((void*)0), b, 0);
+	exit(TEST_SUCCESS);
+
+
+ft_strnstr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [TIMEOUT] [OK] [CRASH] Test code:
+	ft_strnstr("fake", ((void*)0), 3);
+
+
+[crash]: your strnstr crush when null parameter is sent with a size of 0
+Test code:
+	ft_strnstr(((void*)0), "fake", 0);
+
+	exit(TEST_SUCCESS);
+
+
+ft_atoi:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_calloc:     [OK] [OK] [OK] [OK] [OK] 
+ft_strdup:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_substr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {protected}[OK] 
+ft_strjoin:    [OK] [OK] [OK] [OK] [OK] {not protected}
+ft_strtrim:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {protected}
+ft_split:      [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {protected}
+ft_itoa:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strmapi:    [OK] [OK] [OK] [OK] [OK] {protected}[TIMEOUT] Test code:
+	ft_strmapi("olol", ((void*)0));
+
+	ft_strmapi(((void*)0), ((void*)0));
+
+
+ft_putchar_fd: [OK] [OK] 
+ft_putstr_fd:  [OK] [OK] {protected}
+ft_putendl_fd: [OK] [OK] {protected}
+ft_putnbr_fd:  [OK] [OK] [OK] [OK] [OK] 
+ft_lstnew:     [OK] [OK] [OK] [OK] 
+ft_lstadd_front: [OK] [OK] [OK] 
+ft_lstsize:    [OK] [OK] 
+ft_lstlast:    [OK] [OK] 
+ft_lstadd_back:[OK] [OK] [OK] 
+ft_lstdelone:  [OK] {protected}
+ft_lstclear:   [OK] [OK] [OK] {protected}
+ft_lstiter:    [OK] {protected}
+ft_lstmap:     [OK] {protected}
+ft_striteri:   [OK] [OK] {protected}
