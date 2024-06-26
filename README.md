@@ -1,7 +1,7 @@
 # Libft - Custom Static C Library
 
 This repository contains a custom static library wich provdes various utility functions for string manipulation, memory management, character handling, file operations, and linked list implementations in C.
-
+  
 ## Usage
 
 1. **Clone the Repository:**
@@ -31,6 +31,8 @@ This repository contains a custom static library wich provdes various utility fu
 
    ```bash
    gcc -o my_program my_program.c -L. -lft -I.
+  
+<br>
 
 ## Function Index
 
@@ -39,6 +41,8 @@ This repository contains a custom static library wich provdes various utility fu
 3. [Memory Management](#memory-management)
 4. [File Operations](#file-operations)
 5. [Linked List](#linked-list)
+  
+<br>
 
 ## Character Handling
 
