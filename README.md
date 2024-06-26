@@ -50,6 +50,8 @@ This repository contains a custom static library wich provdes various utility fu
   if (ft_isalpha('a')) {
       // Do something if 'a' is an alphabetic character
   }
+  
+<br>
 
 #### [`ft_isdigit.c`](ft_isdigit.c)
 - **Description:** Checks if the given character is a digit (0-9).
@@ -59,7 +61,9 @@ This repository contains a custom static library wich provdes various utility fu
   if (ft_isdigit('5')) {
       // Do something if '5' is a digit
   }
-  
+    
+<br>
+
 #### [`ft_isalnum.c`](ft_isalnum.c)
 - **Description:** Checks if the given character is alphanumeric (a letter or a digit).
 - **Prototype:** `int ft_isalnum(int c);`
@@ -68,6 +72,8 @@ This repository contains a custom static library wich provdes various utility fu
   if (ft_isalnum('a')) {
       // Do something if 'a' is an alphanumeric character
   }
+  
+<br>
 
 #### [`ft_isascii.c`](ft_isascii.c)
 - **Description:** Checks if the given character is an ASCII character (0-127).
@@ -77,7 +83,9 @@ This repository contains a custom static library wich provdes various utility fu
   if (ft_isascii(65)) {
       // Do something if 65 is an ASCII character
   }
-  
+    
+<br>
+
 #### [`ft_isprint.c`](ft_isprint.c)
 - **Description:** Checks if the given character is a printable character, including space.
 - **Prototype:** `int ft_isprint(int c);`
@@ -86,7 +94,9 @@ This repository contains a custom static library wich provdes various utility fu
   if (ft_isprint(' ')) {
       // Do something if ' ' is a printable character
   }
-  
+    
+<br>
+
 #### [`ft_toupper.c`](ft_toupper.c)
 - **Description:** Converts a lowercase letter to its corresponding uppercase letter.
 - **Prototype:** `int ft_toupper(int c);`
@@ -95,6 +105,8 @@ This repository contains a custom static library wich provdes various utility fu
   char lowercase = 'a';
   char uppercase = ft_toupper(lowercase);
   // Now `uppercase` should contain 'A'
+  
+<br>
 
 #### [`ft_tolower.c`](ft_tolower.c)
 - **Description:** Converts an uppercase letter to its corresponding lowercase letter.
@@ -104,7 +116,8 @@ This repository contains a custom static library wich provdes various utility fu
   char uppercase = 'A';
   char lowercase = ft_tolower(uppercase);
   // Now `lowercase` should contain 'a'
-
+  
+<br>
 
 ## String Manipulation
 
@@ -120,6 +133,8 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("Character 'o' not found.\n");
   }
+  
+<br>
 
 #### [`ft_strrchr.c`](ft_strrchr.c)
 - **Description:** Locates the last occurrence of a character in a string.
@@ -133,6 +148,8 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("Character 'o' not found.\n");
   }
+  
+<br>
 
 #### [`ft_strlen.c`](ft_strlen.c)
 - **Description:** Computes the length of a string (not including the terminating null character).
@@ -142,6 +159,8 @@ This repository contains a custom static library wich provdes various utility fu
   const char *str = "Hello, World!";
   size_t length = ft_strlen(str);
   printf("Length of the string '%s' is %zu\n", str, length);
+  
+<br>
 
 #### [`ft_strncmp.c`](ft_strncmp.c)
 - **Description:** Compares two strings up to the first `n` characters.
@@ -158,6 +177,8 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("First 4 characters of '%s' are greater than '%s'.\n", str1, str2);
   }
+  
+<br>
 
 #### [`ft_strlcpy.c`](ft_strlcpy.c)
 - **Description:** Copies a string from `src` to `dst` with a maximum size of `dsize`.
@@ -168,6 +189,8 @@ This repository contains a custom static library wich provdes various utility fu
   const char *src = "Hello, World!";
   size_t copied = ft_strlcpy(dst, src, sizeof(dst));
   printf("Copied '%zu' characters from '%s' to '%s'\n", copied, src, dst);
+  
+<br>
 
 #### [`ft_strlcat.c`](ft_strlcat.c)
 - **Description:** Concatenates a string from `src` to `dst` with a maximum size of `dsize`.
@@ -178,6 +201,8 @@ This repository contains a custom static library wich provdes various utility fu
   const char *src = ", World!";
   size_t concatenated = ft_strlcat(dst, src, sizeof(dst));
   printf("Concatenated '%zu' characters: '%s'\n", concatenated, dst);
+  
+<br>
 
 #### [`ft_strnstr.c`](ft_strnstr.c)
 - **Description:** Locates the first occurrence of the substring `little` in the string `big`, where the search is limited to the first `len` characters of `big`.
@@ -192,6 +217,8 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("Substring '%s' not found in '%s'\n", little, big);
   }
+  
+<br>
 
 #### [`ft_strdup.c`](ft_strdup.c)
 - **Description:** Duplicates a string `s` by allocating memory for a copy and returning a pointer to it.
@@ -207,6 +234,8 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("Memory allocation failed.\n");
   }
+  
+<br>
 
 #### [`ft_substr.c`](ft_substr.c)
 - **Description:** Allocates and returns a substring from the string `s`, starting at index `start` and of maximum length `len`.
@@ -222,6 +251,8 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("Memory allocation failed.\n");
   }
+  
+<br>
 
 #### [`ft_strjoin.c`](ft_strjoin.c)
 - **Description:** Concatenates two strings `s1` and `s2` into a new string.
@@ -237,6 +268,8 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("Memory allocation failed.\n");
   }
+  
+<br>
 
 #### [`ft_strtrim.c`](ft_strtrim.c)
 - **Description:** Allocates and returns a copy of the string `s1` with the characters specified in `set` removed from the beginning and the end of the string.
@@ -253,7 +286,9 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("Memory allocation failed.\n");
   }
-  
+    
+<br>
+
 #### [`ft_split.c`](ft_split.c)
 - **Description:** Splits the string `s` into an array of strings using the delimiter `c`.
 - **Prototype:** `char **ft_split(char const *s, char c);`
@@ -273,6 +308,8 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("Memory allocation failed.\n");
   }
+  
+<br>
 
 #### [`ft_strmapi.c`](ft_strmapi.c)
 - **Description:** Applies the function `f` to each character of the string `s` to create a new string.
@@ -293,6 +330,8 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("Memory allocation failed.\n");
   }
+  
+<br>
 
 #### [`ft_striteri.c`](ft_striteri.c)
 - **Description:** Applies the function `f` to each character of the string `s`, passing its index as the first argument.
@@ -310,6 +349,7 @@ This repository contains a custom static library wich provdes various utility fu
   ft_striteri(str, modify_string);
   printf("Modified string: %s\n", str);
 
+<br>
 
 ## Memory Management
 
@@ -321,6 +361,8 @@ This repository contains a custom static library wich provdes various utility fu
   char buffer[10];
   ft_memset(buffer, 'A', sizeof(buffer));
   printf("Buffer after memset: %s\n", buffer); // Output: "AAAAAAAAAA"
+  
+<br>
 
 #### [`ft_bzero.c`](ft_bzero.c)
 - **Description:** Sets the first `n` bytes of the memory area pointed to by `s` to zero.
@@ -330,6 +372,8 @@ This repository contains a custom static library wich provdes various utility fu
   char buffer[10];
   ft_bzero(buffer, sizeof(buffer));
   printf("Buffer after bzero: %s\n", buffer); // Output: "\0\0\0\0\0\0\0\0\0\0"
+  
+<br>
 
 #### [`ft_memcpy.c`](ft_memcpy.c)
 - **Description:** Copies `n` bytes from memory area `src` to memory area `dest`. The memory areas must not overlap.
@@ -340,6 +384,8 @@ This repository contains a custom static library wich provdes various utility fu
   char dest[10];
   ft_memcpy(dest, src, sizeof(src));
   printf("Copied string: %s\n", dest); // Output: "Hello"
+  
+<br>
 
 #### [`ft_memmove.c`](ft_memmove.c)
 - **Description:** Copies `n` bytes from memory area `src` to memory area `dest`. The memory areas may overlap.
@@ -349,6 +395,8 @@ This repository contains a custom static library wich provdes various utility fu
   char buffer[20] = "Hello, World!";
   ft_memmove(buffer + 7, buffer + 5, 7);
   printf("After memmove: %s\n", buffer); // Output: "Hello, World World!"
+  
+<br>
 
 #### [`ft_memchr.c`](ft_memchr.c)
 - **Description:** Locates the first occurrence of byte `c` in the first `n` bytes of the memory area pointed to by `s`.
@@ -362,6 +410,8 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("Character 'W' not found.\n");
   }
+  
+<br>
 
 #### [`ft_memcmp.c`](ft_memcmp.c)
 - **Description:** Compares the first `n` bytes of memory areas `s1` and `s2`.
@@ -378,6 +428,8 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("First 4 bytes of '%s' are greater than '%s'.\n", str1, str2);
   }
+  
+<br>
 
 #### [`ft_calloc.c`](ft_calloc.c)
 - **Description:** Allocates memory for an array of `count` elements each of size `size`, initialized to zero.
@@ -394,7 +446,8 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("Memory allocation failed.\n");
   }
-
+  
+<br>
 
 ## Other Utility
 
@@ -406,6 +459,8 @@ This repository contains a custom static library wich provdes various utility fu
   const char *str = "12345";
   int num = ft_atoi(str);
   printf("Converted string '%s' to integer: %d\n", str, num);
+  
+<br>
 
 #### [`ft_itoa.c`](ft_itoa.c)
 - **Description:** Converts an integer `n` into a null-terminated string representation.
@@ -421,6 +476,7 @@ This repository contains a custom static library wich provdes various utility fu
       printf("Memory allocation failed.\n");
   }
 
+<br>
 
 ## File Operations
 
@@ -432,6 +488,8 @@ This repository contains a custom static library wich provdes various utility fu
   char ch = 'A';
   int fd = 1; // STDOUT_FILENO
   ft_putchar_fd(ch, fd);
+  
+<br>
 
 #### [`ft_putstr_fd.c`](ft_putstr_fd.c)
 - **Description:** Writes the string `s` to the file descriptor `fd`.
@@ -441,6 +499,8 @@ This repository contains a custom static library wich provdes various utility fu
   char *message = "Hello, World!";
   int fd = 1; // STDOUT_FILENO
   ft_putstr_fd(message, fd);
+  
+<br>
 
 #### [`ft_putendl_fd.c`](ft_putendl_fd.c)
 - **Description:** Writes the string `s` followed by a newline (`'\n'`) to the file descriptor `fd`.
@@ -450,6 +510,8 @@ This repository contains a custom static library wich provdes various utility fu
   char *message = "Hello, World!";
   int fd = 1; // STDOUT_FILENO
   ft_putendl_fd(message, fd);
+  
+<br>
 
 #### [`ft_putnbr_fd.c`](ft_putnbr_fd.c)
 - **Description:** Writes the integer `n` to the file descriptor `fd`.
@@ -459,7 +521,8 @@ This repository contains a custom static library wich provdes various utility fu
   int number = 12345;
   int fd = 1; // STDOUT_FILENO
   ft_putnbr_fd(number, fd);
-
+  
+<br>
 
 ## Linked List
 
@@ -477,6 +540,8 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("Memory allocation failed.\n");
   }
+  
+<br>
 
 #### [`ft_lstadd_front.c`](ft_lstadd_front.c)
 - **Description:** Adds the element `new_node` at the beginning of the linked list `lst`.
@@ -507,6 +572,8 @@ This repository contains a custom static library wich provdes various utility fu
   }
 
   // Don't forget to free allocated memory when done using the list and nodes
+  
+<br>
 
 #### [`ft_lstsize.c`](ft_lstsize.c)
 - **Description:** Counts the number of elements in a linked list.
@@ -518,6 +585,8 @@ This repository contains a custom static library wich provdes various utility fu
 
   int size = ft_lstsize(head);
   printf("Size of the linked list: %d\n", size);
+  
+<br>
 
 #### [`ft_lstlast.c`](ft_lstlast.c)
 - **Description:** Returns the last element of a linked list.
@@ -544,6 +613,8 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("The linked list is empty.\n");
   }
+  
+<br>
 
 #### [`ft_lstadd_back.c`](ft_lstadd_back.c)
 - **Description:** Adds the element `new` at the end of the linked list `lst`.
@@ -571,6 +642,8 @@ This repository contains a custom static library wich provdes various utility fu
       printf("Node content: %s\n", (char *)current->content);
       current = current->next;
   }
+  
+<br>
 
 #### [`ft_lstdelone.c`](ft_lstdelone.c)
 - **Description:** Deletes a single node from a linked list.
@@ -583,6 +656,8 @@ This repository contains a custom static library wich provdes various utility fu
   } else {
       printf("The linked list is empty.\n");
   }
+  
+<br>
 
 #### [`ft_lstclear.c`](ft_lstclear.c)
 - **Description:** Deletes all nodes of a linked list and frees their memory.
@@ -596,6 +671,8 @@ This repository contains a custom static library wich provdes various utility fu
 
   // Don't forget to free allocated memory when done using the linked list pointer itself
   free(my_list); // Assuming my_list was allocated dynamically
+  
+<br>
 
 #### [`ft_lstiter.c`](ft_lstiter.c)
 - **Description:** Iterates over each element of a linked list and applies function `f` to each element.
@@ -612,6 +689,8 @@ This repository contains a custom static library wich provdes various utility fu
 
   // Don't forget to free allocated memory when done using the linked list
   ft_lstclear(my_list, free); // Function to free the linked list
+  
+<br>
 
 #### [`ft_lstmap.c`](ft_lstmap.c)
 - **Description:** Iterates over a linked list `lst`, applies function `f` to each element to create a new list, and returns the new list.
