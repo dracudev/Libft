@@ -34,15 +34,13 @@ This repository contains a custom static library wich provdes various utility fu
 
 ## Function Index
 
-1. [Character Handling Functions](#character-handling-functions)
-2. [String Manipulation Functions](#string-manipulation-functions)
-3. [Memory Management Functions](#memory-management-functions)
-4. [File Operations Functions](#file-operations-functions)
-5. [Linked List Functions](#linked-list-functions)
+1. [Character Handling](#character-handling)
+2. [String Manipulation](#string-manipulation)
+3. [Memory Management](#memory-management)
+4. [File Operations](#file-operations)
+5. [Linked List](#linked-list)
 
-## Functions Overview
-
-### Character Handling Functions
+## Character Handling
 
 #### [`ft_isalpha.c`](ft_isalpha.c)
 - **Description:** Checks if the given character is an alphabetic letter.
@@ -108,7 +106,7 @@ This repository contains a custom static library wich provdes various utility fu
   // Now `lowercase` should contain 'a'
 
 
-### String Manipulation Functions
+## String Manipulation
 
 #### [`ft_strchr.c`](ft_strchr.c)
 - **Description:** Locates the first occurrence of a character in a string.
@@ -313,7 +311,7 @@ This repository contains a custom static library wich provdes various utility fu
   printf("Modified string: %s\n", str);
 
 
-### Memory Management Functions
+## Memory Management
 
 #### [`ft_memset.c`](ft_memset.c)
 - **Description:** Fills the first `n` bytes of the memory area pointed to by `s` with the constant byte `c`.
@@ -398,7 +396,7 @@ This repository contains a custom static library wich provdes various utility fu
   }
 
 
-### Other Utility Functions
+## Other Utility
 
 #### [`ft_atoi.c`](ft_atoi.c)
 - **Description:** Converts a string `nptr` to an integer.
@@ -424,7 +422,7 @@ This repository contains a custom static library wich provdes various utility fu
   }
 
 
-### File Operations Functions
+## File Operations
 
 #### [`ft_putchar_fd.c`](ft_putchar_fd.c)
 - **Description:** Writes the character `c` to the file descriptor `fd`.
@@ -463,7 +461,7 @@ This repository contains a custom static library wich provdes various utility fu
   ft_putnbr_fd(number, fd);
 
 
-### Linked List Functions
+## Linked List
 
 #### [`ft_lstnew.c`](ft_lstnew.c)
 - **Description:** Allocates and returns a new element for a linked list.
