@@ -520,3 +520,125 @@ This repository contains a custom static library wich provdes various utility fu
 
   int size = ft_lstsize(head);
   printf("Size of the linked list: %d\n", size);
+
+#### [`ft_lstlast.c`](ft_lstlast.c)
+- **Description:** Returns the last element of a linked list.
+- **Prototype:** `t_list *ft_lstlast(t_list *lst);`
+- **Usage Example:**
+  ```c 
+  // Create a new node with some data
+  void *data = "Example Data";
+  t_list *new_node = ft_lstnew(data);
+
+  // Add the new node to the linked list
+  t_list *head = new_node;
+
+  // Add more nodes to the linked list
+  void *data2 = "Another Data";
+  t_list *new_node2 = ft_lstnew(data2);
+  new_node->next = new_node2;
+
+  // Get the last node
+  t_list *last_node = ft_lstlast(head);
+
+  if (last_node != NULL) {
+      printf("Last node content: %s\n", (char *)last_node->content);
+  } else {
+      printf("The linked list is empty.\n");
+  }
+
+#### [`ft_lstadd_back.c`](ft_lstadd_back.c)
+- **Description:** Adds the element `new` at the end of the linked list `lst`.
+- **Prototype:** `void ft_lstadd_back(t_list **lst, t_list *new);`
+- **Usage Example:**
+  ```c
+  // Create nodes with some data
+  void *data1 = "First Node";
+  void *data2 = "Second Node";
+
+  t_list *node1 = ft_lstnew(data1);
+  t_list *node2 = ft_lstnew(data2);
+
+  // Initialize the list pointer
+  t_list *list = NULL;
+
+  // Add node1 at the back of the list
+  ft_lstadd_back(&list, node1);
+  // Add node2 at the back of the list
+  ft_lstadd_back(&list, node2);
+
+  // Traverse the list to print contents
+  t_list *current = list;
+  while (current != NULL) {
+      printf("Node content: %s\n", (char *)current->content);
+      current = current->next;
+  }
+
+#### [`ft_lstdelone.c`](ft_lstdelone.c)
+- **Description:** Deletes a single node from a linked list.
+- **Prototype:** `void ft_lstdelone(t_list *lst, void (*del)(void *));`
+- **Usage Example:**
+  ```c
+  // Delete the first node in the linked list
+  if (my_list != NULL) {
+      ft_lstdelone(my_list, free);
+  } else {
+      printf("The linked list is empty.\n");
+  }
+
+#### [`ft_lstclear.c`](ft_lstclear.c)
+- **Description:** Deletes all nodes of a linked list and frees their memory.
+- **Prototype:** `void ft_lstclear(t_list **lst, void (*del)(void *));`
+- **Usage Example:**
+  ```c
+  // Clear the entire linked list
+  ft_lstclear(&my_list, free);
+
+  // After ft_lstclear, my_list should be NULL as all nodes are deleted
+
+  // Don't forget to free allocated memory when done using the linked list pointer itself
+  free(my_list); // Assuming my_list was allocated dynamically
+
+#### [`ft_lstiter.c`](ft_lstiter.c)
+- **Description:** Iterates over each element of a linked list and applies function `f` to each element.
+- **Prototype:** `void ft_lstiter(t_list *lst, void (*f)(void *));`
+- **Usage Example:**
+  ```c
+  // Function to print the content of a node
+  void print_content(void *content) {
+      printf("Node content: %s\n", (char *)content); // Assuming content is a string
+  }
+
+  // Iterate through the linked list and print each node's content
+  ft_lstiter(my_list, print_content);
+
+  // Don't forget to free allocated memory when done using the linked list
+  ft_lstclear(my_list, free); // Function to free the linked list
+
+#### [`ft_lstmap.c`](ft_lstmap.c)
+- **Description:** Iterates over a linked list `lst`, applies function `f` to each element to create a new list, and returns the new list.
+- **Prototype:** `t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));`
+- **Usage Example:**
+  ```c
+  // Function to duplicate the content of a node
+  void *duplicate_content(void *content) {
+      // Assuming content is dynamically allocated (e.g., string)
+      char *duplicate = strdup((char *)content);
+      return (void *)duplicate;
+  }
+
+  // Create a new linked list by duplicating each node's content
+  t_list *new_list = ft_lstmap(my_list, duplicate_content, free);
+
+  // Traverse the new list to print contents
+  t_list *current = new_list;
+  while (current != NULL) {
+      printf("Node content: %s\n", (char *)current->content);
+      current = current->next;
+  }
+
+  // Don't forget to free allocated memory when done using both the original and new linked lists
+  ft_lstclear(my_list, free); // Function to free the original linked list
+  ft_lstclear(new_list, free); // Function to free the new linked list
+
+
