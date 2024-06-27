@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 12:35:43 by antandre          #+#    #+#             */
-/*   Updated: 2024/05/23 13:54:16 by antandre         ###   ########.fr       */
+/*   Updated: 2024/06/27 12:16:27 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*str;
 	size_t	len;
 
+	if (!s1 || !s2)
+		return (0);
 	len = ft_strlen(s1) + ft_strlen(s2);
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (str == NULL)

@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 13:36:11 by antandre          #+#    #+#             */
-/*   Updated: 2024/05/01 14:15:49 by antandre         ###   ########.fr       */
+/*   Updated: 2024/06/27 12:15:10 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (!big)
+		return (0);
 	if (little[0] == '\0')
 		return ((char *)big);
 	i = 0;
