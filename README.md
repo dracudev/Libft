@@ -9,7 +9,7 @@ This repository contains a custom static library wich provdes various utility fu
    Clone the `libft` repository into your project directory.
 
    ```bash
-   git clone https://github.com/yourusername/libft.git
+   git clone https://github.com/dracudev/libft.git
 
 2. **Compile libft**
 
@@ -36,12 +36,25 @@ This repository contains a custom static library wich provdes various utility fu
 
 ## Function Index
 
-1. [Character Handling](#character-handling)
-2. [String Manipulation](#string-manipulation)
-3. [Memory Management](#memory-management)
-4. [File Operations](#file-operations)
-5. [Linked List](#linked-list)
-  
+| Character Handling                                                        | String Manipulation                                                        | Memory Management                                                          | File Operations                                                          | Linked List                                                                |
+| :------------------------------------------------------------------------ | :------------------------------------------------------------------------- | :------------------------------------------------------------------------- | :----------------------------------------------------------------------- | :------------------------------------------------------------------------- |
+| [ft_isalpha](#ft_isalphac)                                                 | [ft_strlen](#ft_strlenc)                                                    | [ft_memset](#ft_memsetc)                                                    | [ft_putchar_fd](#ft_putchar_fdc)                                          | [ft_lstnew](#ft_lstnewc)                                                   |
+| [ft_isdigit](#ft_isdigitc)                                                 | [ft_strlcpy](#ft_strlcpyc)                                                  | [ft_bzero](#ft_bzeroc)                                                      | [ft_putstr_fd](#ft_putstr_fdc)                                            | [ft_lstadd_front](#ft_lstadd_frontc)                                       |
+| [ft_isalnum](#ft_isalnumc)                                                 | [ft_strlcat](#ft_strlcatc)                                                  | [ft_memcpy](#ft_memcpyc)                                                    | [ft_putendl_fd](#ft_putendl_fdc)                                          | [ft_lstsize](#ft_lstsizec)                                                 |
+| [ft_isascii](#ft_isasciic)                                                 | [ft_strchr](#ft_strchrc)                                                    | [ft_memcpy](#ft_memcpyc)                                                  | [ft_putnbr_fd](#ft_putnbr_fdc)                                            | [ft_lstlast](#ft_lstlastc)                                                 |
+| [ft_isprint](#ft_isprintc)                                                 | [ft_strrchr](#ft_strrchrc)                                                  | [ft_memmove](#ft_memmovec)                                                  |                                                                          | [ft_lstadd_back](#ft_lstadd_backc)                                         |
+| [ft_toupper](#ft_toupperc)                                                 | [ft_strnstr](#ft_strnstrc)                                                  | [ft_memchr](#ft_memchrc)                                                    |                                                                          | [ft_lstdelone](#ft_lstdelonec)                                             |
+| [ft_tolower](#ft_tolowerc)                                                 | [ft_strncmp](#ft_strncmpc)                                                  | [ft_memcmp](#ft_memcmpc)                                                    |                                                                          | [ft_lstclear](#ft_lstclearc)                                               |
+|                                                                           | [ft_strdup](#ft_strdupc)                                                    | [ft_calloc](#ft_callocc)                                                    |                                                                          | [ft_lstiter](#ft_lstiterc)                                                 |
+|                                                                           | [ft_atoi](#ft_atoic)                                                        |                                                                            |                                                                          | [ft_lstmap](#ft_lstmapc)                                                   |
+|                                                                           | [ft_substr](#ft_substrc)                                                    |                                                                            |                                                                          |                                                                            |
+|                                                                           | [ft_strjoin](#ft_strjoinc)                                                  |                                                                            |                                                                          |                                                                            |
+|                                                                           | [ft_strtrim](#ft_strtrimc)                                                  |                                                                            |                                                                          |                                                                            |
+|                                                                           | [ft_split](#ft_splitc)                                                      |                                                                            |                                                                          |                                                                            |
+|                                                                           | [ft_itoa](#ft_itoac)                                                        |                                                                            |                                                                          |                                                                            |
+|                                                                           | [ft_strmapi](#ft_strmapic)                                                  |                                                                            |                                                                          |                                                                            |
+|                                                                           | [ft_striteri](#ft_striteric)                                                |                                                                            |                                                                          |                                                                            |
+
 <br>
 
 ## Character Handling
@@ -241,6 +254,17 @@ This repository contains a custom static library wich provdes various utility fu
   
 <br>
 
+#### [`ft_atoi.c`](ft_atoi.c)
+- **Description:** Converts a string `nptr` to an integer.
+- **Prototype:** `int ft_atoi(const char *nptr);`
+- **Usage Example:**
+  ```c
+  const char *str = "12345";
+  int num = ft_atoi(str);
+  printf("Converted string '%s' to integer: %d\n", str, num);
+  
+<br>
+
 #### [`ft_substr.c`](ft_substr.c)
 - **Description:** Allocates and returns a substring from the string `s`, starting at index `start` and of maximum length `len`.
 - **Prototype:** `char *ft_substr(const char *s, unsigned int start, size_t len);`
@@ -313,6 +337,22 @@ This repository contains a custom static library wich provdes various utility fu
       printf("Memory allocation failed.\n");
   }
   
+<br>
+
+#### [`ft_itoa.c`](ft_itoa.c)
+- **Description:** Converts an integer `n` into a null-terminated string representation.
+- **Prototype:** `char *ft_itoa(int n);`
+- **Usage Example:**
+  ```c
+  int num = 12345;
+  char *str_num = ft_itoa(num);
+  if (str_num != NULL) {
+      printf("Integer %d as a string: %s\n", num, str_num);
+      free(str_num); // Free allocated memory when done
+  } else {
+      printf("Memory allocation failed.\n");
+  }
+
 <br>
 
 #### [`ft_strmapi.c`](ft_strmapi.c)
@@ -451,35 +491,6 @@ This repository contains a custom static library wich provdes various utility fu
       printf("Memory allocation failed.\n");
   }
   
-<br>
-
-## Other Utility
-
-#### [`ft_atoi.c`](ft_atoi.c)
-- **Description:** Converts a string `nptr` to an integer.
-- **Prototype:** `int ft_atoi(const char *nptr);`
-- **Usage Example:**
-  ```c
-  const char *str = "12345";
-  int num = ft_atoi(str);
-  printf("Converted string '%s' to integer: %d\n", str, num);
-  
-<br>
-
-#### [`ft_itoa.c`](ft_itoa.c)
-- **Description:** Converts an integer `n` into a null-terminated string representation.
-- **Prototype:** `char *ft_itoa(int n);`
-- **Usage Example:**
-  ```c
-  int num = 12345;
-  char *str_num = ft_itoa(num);
-  if (str_num != NULL) {
-      printf("Integer %d as a string: %s\n", num, str_num);
-      free(str_num); // Free allocated memory when done
-  } else {
-      printf("Memory allocation failed.\n");
-  }
-
 <br>
 
 ## File Operations
