@@ -1,4 +1,4 @@
-LIB = ar rcs
+LIB = ar
 RM = rm -f
 
 CC = gcc
@@ -14,26 +14,25 @@ ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 OBJ = $(SRC:.c=.o)
 INCLUDE = libft.h
 
-BONUSSRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c\
+BONUS_SRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c\
 ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
-
-BONUSOBJ = $(BONUSSRC:.c=.o)
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 .PHONY: all clean fclean re bonus
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(INCLUDE)
-	$(LIB) $(NAME) $(OBJ)
+$(NAME): $(OBJ)
+	$(LIB) rcs $(NAME) $(OBJ)
 
-bonus: $(OBJ) $(BONUSOBJ) $(INCLUDE)
-	$(LIB) $(NAME) $(BONUSOBJ) $(OBJ)
+bonus: $(NAME) $(BONUS_OBJ)
+	$(LIB) r $(NAME) $(BONUS_OBJ)
 
-%.o: %.c
+%.o: %.c $(INCLUDE)
 	$(CC) $(CCFLAGS) -c -o $@ $<
 
 clean:
-	$(RM) $(OBJ) $(BONUSOBJ)
+	$(RM) $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
 	$(RM) $(NAME)
