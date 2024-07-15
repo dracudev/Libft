@@ -62,7 +62,7 @@ This repository contains a custom static library wich provdes various utility fu
 
 ## Character Handling
 
-#### [`ft_isalpha.c`](ft_isalpha.c)
+#### [`ft_isalpha.c`](src/ft_isalpha.c)
 - **Description:** Checks if the given character is an alphabetic letter.
 - **Prototype:** `int ft_isalpha(int c);`
 - **Usage Example:**
