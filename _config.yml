@@ -1,8 +1,4 @@
 remote_theme: abhinavs/moonwalk
-url: https://github.com/dracudev/Libft
-title: Libft
-author: Javier Andreu
 
 theme_config:
   appearance: "dark"
-  show_navbar: true 
