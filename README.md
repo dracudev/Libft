@@ -34,7 +34,17 @@ This repository contains a custom static library wich provdes various utility fu
    ```bash
    gcc -o my_program my_program.c -L. -lft -I.
    ```
-  
+
+4. **Additional Makefile Commands:**
+
+  - `make bonus`: Compiles additional bonus functions that are not part of the mandatory library functions. These bonus functions are useful for working with linked lists.
+
+  - `make clean`: Removes all the object files (*.o) created during the compilation process. This is useful for cleaning up the directory without removing the compiled library file libft.a.
+
+  - `make fclean`: Performs a deeper clean by removing all the object files as well as the compiled library file libft.a. This essentially resets the directory to its initial state before compilation.
+
+  - `make re`: Combines the fclean and make commands to first remove all compiled files and then recompile the entire library from scratch. This is useful if you want to ensure a completely fresh build.
+
 <br>
 
 ## Function Index
