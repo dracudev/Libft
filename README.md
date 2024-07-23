@@ -37,8 +37,6 @@ This repository contains a custom static library wich provdes various utility fu
 
 4. **Additional Makefile Commands:**
 
-  - `make bonus`: Compiles additional bonus functions that are not part of the mandatory library functions. These bonus functions are useful for working with linked lists.
-
   - `make clean`: Removes all the object files (*.o) created during the compilation process. This is useful for cleaning up the directory without removing the compiled library file libft.a.
 
   - `make fclean`: Performs a deeper clean by removing all the object files as well as the compiled library file libft.a. This essentially resets the directory to its initial state before compilation.
@@ -72,7 +70,7 @@ This repository contains a custom static library wich provdes various utility fu
 
 ## Character Handling
 
-#### [`ft_isalpha.c`](src/ft_isalpha.c)
+#### [`ft_isalpha.c`](src/char-handling/ft_isalpha.c)
 - **Description:** Checks if the given character is an alphabetic letter.
 - **Prototype:** `int ft_isalpha(int c);`
 - **Usage Example:**
@@ -83,7 +81,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_isdigit.c`](src/ft_isdigit.c)
+#### [`ft_isdigit.c`](src/char-handling/ft_isdigit.c)
 - **Description:** Checks if the given character is a digit (0-9).
 - **Prototype:** `int ft_isdigit(int c);`
 - **Usage Example:**
@@ -94,7 +92,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_isalnum.c`](src/ft_isalnum.c)
+#### [`ft_isalnum.c`](src/char-handling/ft_isalnum.c)
 - **Description:** Checks if the given character is alphanumeric (a letter or a digit).
 - **Prototype:** `int ft_isalnum(int c);`
 - **Usage Example:**
@@ -105,7 +103,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_isascii.c`](src/ft_isascii.c)
+#### [`ft_isascii.c`](src/char-handling/ft_isascii.c)
 - **Description:** Checks if the given character is an ASCII character (0-127).
 - **Prototype:** `int ft_isascii(int c);`
 - **Usage Example:**
@@ -116,7 +114,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_isprint.c`](src/ft_isprint.c)
+#### [`ft_isprint.c`](src/char-handling/ft_isprint.c)
 - **Description:** Checks if the given character is a printable character, including space.
 - **Prototype:** `int ft_isprint(int c);`
 - **Usage Example:**
@@ -127,7 +125,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_toupper.c`](src/ft_toupper.c)
+#### [`ft_toupper.c`](src/char-handling/ft_toupper.c)
 - **Description:** Converts a lowercase letter to its corresponding uppercase letter.
 - **Prototype:** `int ft_toupper(int c);`
 - **Usage Example:**
@@ -138,7 +136,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_tolower.c`](src/ft_tolower.c)
+#### [`ft_tolower.c`](src/char-handling/ft_tolower.c)
 - **Description:** Converts an uppercase letter to its corresponding lowercase letter.
 - **Prototype:** `int ft_tolower(int c);`
 - **Usage Example:**
