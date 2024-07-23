@@ -149,7 +149,7 @@ This repository contains a custom static library wich provdes various utility fu
 
 ## String Manipulation
 
-#### [`ft_strchr.c`](src/ft_strchr.c)
+#### [`ft_strchr.c`](src/str-manipulation/ft_strchr.c)
 - **Description:** Locates the first occurrence of a character in a string.
 - **Prototype:** `char *ft_strchr(const char *s, int c);`
 - **Usage Example:**
@@ -164,7 +164,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_strrchr.c`](src/ft_strrchr.c)
+#### [`ft_strrchr.c`](src/str-manipulation/ft_strrchr.c)
 - **Description:** Locates the last occurrence of a character in a string.
 - **Prototype:** `char *ft_strrchr(const char *s, int c);`
 - **Usage Example:**
@@ -179,7 +179,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_strlen.c`](src/ft_strlen.c)
+#### [`ft_strlen.c`](src/str-manipulation/ft_strlen.c)
 - **Description:** Computes the length of a string (not including the terminating null character).
 - **Prototype:** `size_t ft_strlen(const char *s);`
 - **Usage Example:**
@@ -190,7 +190,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_strncmp.c`](src/ft_strncmp.c)
+#### [`ft_strncmp.c`](src/str-manipulation/ft_strncmp.c)
 - **Description:** Compares two strings up to the first `n` characters.
 - **Prototype:** `int ft_strncmp(const char *s1, const char *s2, size_t n);`
 - **Usage Example:**
@@ -208,7 +208,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_strlcpy.c`](src/ft_strlcpy.c)
+#### [`ft_strlcpy.c`](src/str-manipulation/ft_strlcpy.c)
 - **Description:** Copies a string from `src` to `dst` with a maximum size of `dsize`.
 - **Prototype:** `size_t ft_strlcpy(char *dst, const char *src, size_t dsize);`
 - **Usage Example:**
@@ -220,7 +220,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_strlcat.c`](src/ft_strlcat.c)
+#### [`ft_strlcat.c`](src/str-manipulation/ft_strlcat.c)
 - **Description:** Concatenates a string from `src` to `dst` with a maximum size of `dsize`.
 - **Prototype:** `size_t ft_strlcat(char *dst, const char *src, size_t dsize);`
 - **Usage Example:**
@@ -232,7 +232,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_strnstr.c`](src/ft_strnstr.c)
+#### [`ft_strnstr.c`](src/str-manipulation/ft_strnstr.c)
 - **Description:** Locates the first occurrence of the substring `little` in the string `big`, where the search is limited to the first `len` characters of `big`.
 - **Prototype:** `char *ft_strnstr(const char *big, const char *little, size_t len);`
 - **Usage Example:**
@@ -248,7 +248,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_strdup.c`](src/ft_strdup.c)
+#### [`ft_strdup.c`](src/str-manipulation/ft_strdup.c)
 - **Description:** Duplicates a string `s` by allocating memory for a copy and returning a pointer to it.
 - **Prototype:** `char *ft_strdup(const char *s);`
 - **Usage Example:**
@@ -265,7 +265,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_atoi.c`](src/ft_atoi.c)
+#### [`ft_atoi.c`](src/str-manipulation/ft_atoi.c)
 - **Description:** Converts a string `nptr` to an integer.
 - **Prototype:** `int ft_atoi(const char *nptr);`
 - **Usage Example:**
@@ -276,7 +276,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_substr.c`](src/ft_substr.c)
+#### [`ft_substr.c`](src/str-manipulation/ft_substr.c)
 - **Description:** Allocates and returns a substring from the string `s`, starting at index `start` and of maximum length `len`.
 - **Prototype:** `char *ft_substr(const char *s, unsigned int start, size_t len);`
 - **Usage Example:**
@@ -293,7 +293,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_strjoin.c`](src/ft_strjoin.c)
+#### [`ft_strjoin.c`](src/str-manipulation/ft_strjoin.c)
 - **Description:** Concatenates two strings `s1` and `s2` into a new string.
 - **Prototype:** `char *ft_strjoin(const char *s1, const char *s2);`
 - **Usage Example:**
@@ -310,7 +310,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_strtrim.c`](src/ft_strtrim.c)
+#### [`ft_strtrim.c`](src/str-manipulation/ft_strtrim.c)
 - **Description:** Allocates and returns a copy of the string `s1` with the characters specified in `set` removed from the beginning and the end of the string.
 - **Prototype:** `char *ft_strtrim(const char *s1, const char *set);`
 - **Usage Example:**
@@ -328,7 +328,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_split.c`](src/ft_split.c)
+#### [`ft_split.c`](src/str-manipulation/ft_split.c)
 - **Description:** Splits the string `s` into an array of strings using the delimiter `c`.
 - **Prototype:** `char **ft_split(char const *s, char c);`
 - **Usage Example:**
@@ -350,7 +350,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_itoa.c`](src/ft_itoa.c)
+#### [`ft_itoa.c`](src/str-manipulation/ft_itoa.c)
 - **Description:** Converts an integer `n` into a null-terminated string representation.
 - **Prototype:** `char *ft_itoa(int n);`
 - **Usage Example:**
@@ -366,7 +366,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_strmapi.c`](src/ft_strmapi.c)
+#### [`ft_strmapi.c`](src/str-manipulation/ft_strmapi.c)
 - **Description:** Applies the function `f` to each character of the string `s` to create a new string.
 - **Prototype:** `char *ft_strmapi(char const *s, char (*f)(unsigned int, char));`
 - **Usage Example:**
@@ -388,7 +388,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_striteri.c`](src/ft_striteri.c)
+#### [`ft_striteri.c`](src/str-manipulation/ft_striteri.c)
 - **Description:** Applies the function `f` to each character of the string `s`, passing its index as the first argument.
 - **Prototype:** `void ft_striteri(char *s, void (*f)(unsigned int, char*));`
 - **Usage Example:**
@@ -408,7 +408,7 @@ This repository contains a custom static library wich provdes various utility fu
 
 ## Memory Management
 
-#### [`ft_memset.c`](src/ft_memset.c)
+#### [`ft_memset.c`](src/mem-management/ft_memset.c)
 - **Description:** Fills the first `n` bytes of the memory area pointed to by `s` with the constant byte `c`.
 - **Prototype:** `void *ft_memset(void *s, int c, size_t n);`
 - **Usage Example:**
@@ -419,7 +419,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_bzero.c`](src/ft_bzero.c)
+#### [`ft_bzero.c`](src/mem-management/ft_bzero.c)
 - **Description:** Sets the first `n` bytes of the memory area pointed to by `s` to zero.
 - **Prototype:** `void ft_bzero(void *s, size_t n);`
 - **Usage Example:**
@@ -430,7 +430,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_memcpy.c`](src/ft_memcpy.c)
+#### [`ft_memcpy.c`](src/mem-management/ft_memcpy.c)
 - **Description:** Copies `n` bytes from memory area `src` to memory area `dest`. The memory areas must not overlap.
 - **Prototype:** `void *ft_memcpy(void *dest, const void *src, size_t n);`
 - **Usage Example:**
@@ -442,7 +442,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_memmove.c`](src/ft_memmove.c)
+#### [`ft_memmove.c`](src/mem-management/ft_memmove.c)
 - **Description:** Copies `n` bytes from memory area `src` to memory area `dest`. The memory areas may overlap.
 - **Prototype:** `void *ft_memmove(void *dest, const void *src, size_t n);`
 - **Usage Example:**
@@ -453,7 +453,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_memchr.c`](src/ft_memchr.c)
+#### [`ft_memchr.c`](src/mem-management/ft_memchr.c)
 - **Description:** Locates the first occurrence of byte `c` in the first `n` bytes of the memory area pointed to by `s`.
 - **Prototype:** `void *ft_memchr(const void *s, int c, size_t n);`
 - **Usage Example:**
@@ -468,7 +468,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_memcmp.c`](src/ft_memcmp.c)
+#### [`ft_memcmp.c`](src/mem-management/ft_memcmp.c)
 - **Description:** Compares the first `n` bytes of memory areas `s1` and `s2`.
 - **Prototype:** `int ft_memcmp(const void *s1, const void *s2, size_t n);`
 - **Usage Example:**
@@ -486,7 +486,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_calloc.c`](src/ft_calloc.c)
+#### [`ft_calloc.c`](src/mem-management/ft_calloc.c)
 - **Description:** Allocates memory for an array of `count` elements each of size `size`, initialized to zero.
 - **Prototype:** `void *ft_calloc(size_t count, size_t size);`
 - **Usage Example:**
@@ -506,7 +506,7 @@ This repository contains a custom static library wich provdes various utility fu
 
 ## File Operations
 
-#### [`ft_putchar_fd.c`](src/ft_putchar_fd.c)
+#### [`ft_putchar_fd.c`](src/file-ops/ft_putchar_fd.c)
 - **Description:** Writes the character `c` to the file descriptor `fd`.
 - **Prototype:** `void ft_putchar_fd(char c, int fd);`
 - **Usage Example:**
@@ -517,7 +517,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_putstr_fd.c`](src/ft_putstr_fd.c)
+#### [`ft_putstr_fd.c`](src/file-ops/ft_putstr_fd.c)
 - **Description:** Writes the string `s` to the file descriptor `fd`.
 - **Prototype:** `void ft_putstr_fd(char *s, int fd);`
 - **Usage Example:**
@@ -528,7 +528,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_putendl_fd.c`](src/ft_putendl_fd.c)
+#### [`ft_putendl_fd.c`](src/file-ops/ft_putendl_fd.c)
 - **Description:** Writes the string `s` followed by a newline (`'\n'`) to the file descriptor `fd`.
 - **Prototype:** `void ft_putendl_fd(char *s, int fd);`
 - **Usage Example:**
@@ -539,7 +539,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_putnbr_fd.c`](src/ft_putnbr_fd.c)
+#### [`ft_putnbr_fd.c`](src/file-ops/ft_putnbr_fd.c)
 - **Description:** Writes the integer `n` to the file descriptor `fd`.
 - **Prototype:** `void ft_putnbr_fd(int n, int fd);`
 - **Usage Example:**
@@ -552,7 +552,7 @@ This repository contains a custom static library wich provdes various utility fu
 
 ## Linked List
 
-#### [`ft_lstnew.c`](bonus-src/ft_lstnew_bonus.c)
+#### [`ft_lstnew.c`](src/linked-list/ft_lstnew_bonus.c)
 - **Description:** Allocates and returns a new element for a linked list.
 - **Prototype:** `t_list *ft_lstnew(void *content);`
 - **Usage Example:**
@@ -569,7 +569,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstadd_front.c`](bonus-src/ft_lstadd_front_bonus.c)
+#### [`ft_lstadd_front.c`](src/linked-list/ft_lstadd_front_bonus.c)
 - **Description:** Adds the element `new_node` at the beginning of the linked list `lst`.
 - **Prototype:** `void ft_lstadd_front(t_list **lst, t_list *new_node);`
 - **Usage Example:**
@@ -601,7 +601,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstsize.c`](bonus-src/ft_lstsize_bonus.c)
+#### [`ft_lstsize.c`](src/linked-list/ft_lstsize_bonus.c)
 - **Description:** Counts the number of elements in a linked list.
 - **Prototype:** `int ft_lstsize(t_list *lst);`
 - **Usage Example:**
@@ -614,7 +614,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstlast.c`](bonus-src/ft_lstlast_bonus.c)
+#### [`ft_lstlast.c`](src/linked-list/ft_lstlast_bonus.c)
 - **Description:** Returns the last element of a linked list.
 - **Prototype:** `t_list *ft_lstlast(t_list *lst);`
 - **Usage Example:**
@@ -642,7 +642,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstadd_back.c`](bonus-src/ft_lstadd_back_bonus.c)
+#### [`ft_lstadd_back.c`](src/linked-list/ft_lstadd_back_bonus.c)
 - **Description:** Adds the element `new` at the end of the linked list `lst`.
 - **Prototype:** `void ft_lstadd_back(t_list **lst, t_list *new);`
 - **Usage Example:**
@@ -671,7 +671,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstdelone.c`](bonus-src/ft_lstdelone_bonus.c)
+#### [`ft_lstdelone.c`](src/linked-list/ft_lstdelone_bonus.c)
 - **Description:** Deletes a single node from a linked list.
 - **Prototype:** `void ft_lstdelone(t_list *lst, void (*del)(void *));`
 - **Usage Example:**
@@ -685,7 +685,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstclear.c`](bonus-src/ft_lstclear_bonus.c)
+#### [`ft_lstclear.c`](src/linked-list/ft_lstclear_bonus.c)
 - **Description:** Deletes all nodes of a linked list and frees their memory.
 - **Prototype:** `void ft_lstclear(t_list **lst, void (*del)(void *));`
 - **Usage Example:**
@@ -700,7 +700,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstiter.c`](bonus-src/ft_lstiter_bonus.c)
+#### [`ft_lstiter.c`](src/linked-list/ft_lstiter_bonus.c)
 - **Description:** Iterates over each element of a linked list and applies function `f` to each element.
 - **Prototype:** `void ft_lstiter(t_list *lst, void (*f)(void *));`
 - **Usage Example:**
@@ -718,7 +718,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstmap.c`](bonus-src/ft_lstmap_bonus.c)
+#### [`ft_lstmap.c`](src/linked-list/ft_lstmap_bonus.c)
 - **Description:** Iterates over a linked list `lst`, applies function `f` to each element to create a new list, and returns the new list.
 - **Prototype:** `t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));`
 - **Usage Example:**
