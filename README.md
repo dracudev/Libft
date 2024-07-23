@@ -53,7 +53,7 @@ This repository contains a custom static library wich provdes various utility fu
 | [ft_isdigit](#ft_isdigitc)                                                 | [ft_strlcpy](#ft_strlcpyc)                                                  | [ft_bzero](#ft_bzeroc)                                                      | [ft_putstr_fd](#ft_putstr_fdc)                                            | [ft_lstadd_front](#ft_lstadd_frontc)                                       |
 | [ft_isalnum](#ft_isalnumc)                                                 | [ft_strlcat](#ft_strlcatc)                                                  | [ft_memcpy](#ft_memcpyc)                                                    | [ft_putendl_fd](#ft_putendl_fdc)                                          | [ft_lstsize](#ft_lstsizec)                                                 |
 | [ft_isascii](#ft_isasciic)                                                 | [ft_strchr](#ft_strchrc)                                                    | [ft_memmove](#ft_memmovec)                                                  | [ft_putnbr_fd](#ft_putnbr_fdc)                                            | [ft_lstlast](#ft_lstlastc)                                                 |
-| [ft_isprint](#ft_isprintc)                                                 | [ft_strrchr](#ft_strrchrc)                                                  | [ft_memchr](#ft_memchrc)                                                    |                                                                          | [ft_lstadd_back](#ft_lstadd_backc)                                         |
+| [ft_isprint](#ft_isprintc)                                                 | [ft_strrchr](#ft_strrchrc)                                                  | [ft_memchr](#ft_memchrc)                                                    | [ft_printf](#ft_printfc)                                                                          | [ft_lstadd_back](#ft_lstadd_backc)                                         |
 | [ft_toupper](#ft_toupperc)                                                 | [ft_strnstr](#ft_strnstrc)                                                  | [ft_memcmp](#ft_memcmpc)                                                    |                                                                          | [ft_lstdelone](#ft_lstdelonec)                                             |
 | [ft_tolower](#ft_tolowerc)                                                 | [ft_strncmp](#ft_strncmpc)                                                  | [ft_calloc](#ft_callocc)                                                    |                                                                          | [ft_lstclear](#ft_lstclearc)                                               |
 |                                                                           | [ft_strdup](#ft_strdupc)                                                    |                                                                            |                                                                          | [ft_lstiter](#ft_lstiterc)                                                 |
@@ -548,6 +548,22 @@ This repository contains a custom static library wich provdes various utility fu
   int fd = 1; // STDOUT_FILENO
   ft_putnbr_fd(number, fd);
   ```
+<br>
+
+#### [`ft_printf.c`](https://github.com/dracudev/Printf)
+- **Description:** Formats and prints a string to the standard output based on the provided format string and arguments.
+- **Prototype:** `int ft_printf(char const *str, ...);`
+- **Usage Example:**
+  ```c
+  int main() {
+    int num = 42;
+    char name[] = "John Doe";
+
+    ft_printf("Integer: %d, String: %s\n", num, name);
+    return 0;
+  }
+  ```
+  
 <br>
 
 ## Linked List
