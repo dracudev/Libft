@@ -552,7 +552,7 @@ This repository contains a custom static library wich provdes various utility fu
 
 ## Linked List
 
-#### [`ft_lstnew.c`](src/linked-list/ft_lstnew_bonus.c)
+#### [`ft_lstnew.c`](src/linked-list/ft_lstnew.c)
 - **Description:** Allocates and returns a new element for a linked list.
 - **Prototype:** `t_list *ft_lstnew(void *content);`
 - **Usage Example:**
@@ -569,7 +569,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstadd_front.c`](src/linked-list/ft_lstadd_front_bonus.c)
+#### [`ft_lstadd_front.c`](src/linked-list/ft_lstadd_front.c)
 - **Description:** Adds the element `new_node` at the beginning of the linked list `lst`.
 - **Prototype:** `void ft_lstadd_front(t_list **lst, t_list *new_node);`
 - **Usage Example:**
@@ -601,7 +601,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstsize.c`](src/linked-list/ft_lstsize_bonus.c)
+#### [`ft_lstsize.c`](src/linked-list/ft_lstsize.c)
 - **Description:** Counts the number of elements in a linked list.
 - **Prototype:** `int ft_lstsize(t_list *lst);`
 - **Usage Example:**
@@ -614,7 +614,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstlast.c`](src/linked-list/ft_lstlast_bonus.c)
+#### [`ft_lstlast.c`](src/linked-list/ft_lstlast.c)
 - **Description:** Returns the last element of a linked list.
 - **Prototype:** `t_list *ft_lstlast(t_list *lst);`
 - **Usage Example:**
@@ -642,7 +642,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstadd_back.c`](src/linked-list/ft_lstadd_back_bonus.c)
+#### [`ft_lstadd_back.c`](src/linked-list/ft_lstadd_back.c)
 - **Description:** Adds the element `new` at the end of the linked list `lst`.
 - **Prototype:** `void ft_lstadd_back(t_list **lst, t_list *new);`
 - **Usage Example:**
@@ -671,7 +671,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstdelone.c`](src/linked-list/ft_lstdelone_bonus.c)
+#### [`ft_lstdelone.c`](src/linked-list/ft_lstdelone.c)
 - **Description:** Deletes a single node from a linked list.
 - **Prototype:** `void ft_lstdelone(t_list *lst, void (*del)(void *));`
 - **Usage Example:**
@@ -685,7 +685,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstclear.c`](src/linked-list/ft_lstclear_bonus.c)
+#### [`ft_lstclear.c`](src/linked-list/ft_lstclear.c)
 - **Description:** Deletes all nodes of a linked list and frees their memory.
 - **Prototype:** `void ft_lstclear(t_list **lst, void (*del)(void *));`
 - **Usage Example:**
@@ -700,7 +700,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstiter.c`](src/linked-list/ft_lstiter_bonus.c)
+#### [`ft_lstiter.c`](src/linked-list/ft_lstiter.c)
 - **Description:** Iterates over each element of a linked list and applies function `f` to each element.
 - **Prototype:** `void ft_lstiter(t_list *lst, void (*f)(void *));`
 - **Usage Example:**
@@ -718,7 +718,7 @@ This repository contains a custom static library wich provdes various utility fu
   ```
 <br>
 
-#### [`ft_lstmap.c`](src/linked-list/ft_lstmap_bonus.c)
+#### [`ft_lstmap.c`](src/linked-list/ft_lstmap.c)
 - **Description:** Iterates over a linked list `lst`, applies function `f` to each element to create a new list, and returns the new list.
 - **Prototype:** `t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));`
 - **Usage Example:**
