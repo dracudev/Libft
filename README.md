@@ -54,7 +54,7 @@ This repository contains a custom static library wich provdes various utility fu
 | [ft_isalnum](#ft_isalnumc)                                                 | [ft_strlcat](#ft_strlcatc)                                                  | [ft_memcpy](#ft_memcpyc)                                                    | [ft_putendl_fd](#ft_putendl_fdc)                                          | [ft_lstsize](#ft_lstsizec)                                                 |
 | [ft_isascii](#ft_isasciic)                                                 | [ft_strchr](#ft_strchrc)                                                    | [ft_memmove](#ft_memmovec)                                                  | [ft_putnbr_fd](#ft_putnbr_fdc)                                            | [ft_lstlast](#ft_lstlastc)                                                 |
 | [ft_isprint](#ft_isprintc)                                                 | [ft_strrchr](#ft_strrchrc)                                                  | [ft_memchr](#ft_memchrc)                                                    | [ft_printf](#ft_printfc)                                                                          | [ft_lstadd_back](#ft_lstadd_backc)                                         |
-| [ft_toupper](#ft_toupperc)                                                 | [ft_strnstr](#ft_strnstrc)                                                  | [ft_memcmp](#ft_memcmpc)                                                    |                                                                          | [ft_lstdelone](#ft_lstdelonec)                                             |
+| [ft_toupper](#ft_toupperc)                                                 | [ft_strnstr](#ft_strnstrc)                                                  | [ft_memcmp](#ft_memcmpc)                                                    | [get_next_line](#get_next_linec)                                                                          | [ft_lstdelone](#ft_lstdelonec)                                             |
 | [ft_tolower](#ft_tolowerc)                                                 | [ft_strncmp](#ft_strncmpc)                                                  | [ft_calloc](#ft_callocc)                                                    |                                                                          | [ft_lstclear](#ft_lstclearc)                                               |
 |                                                                           | [ft_strdup](#ft_strdupc)                                                    |                                                                            |                                                                          | [ft_lstiter](#ft_lstiterc)                                                 |
 |                                                                           | [ft_atoi](#ft_atoic)                                                        |                                                                            |                                                                          | [ft_lstmap](#ft_lstmapc)                                                   |
@@ -560,6 +560,35 @@ This repository contains a custom static library wich provdes various utility fu
     char name[] = "John Doe";
 
     ft_printf("Integer: %d, String: %s\n", num, name);
+    return 0;
+  }
+  ```
+
+<br>
+
+#### [`get_next_line.c`](https://github.com/dracudev/Get-Next-Line)
+- **Description:** Reads and returns the next line from a file descriptor `fd`, including the newline character (`\n`) if present. Handles multiple file descriptors by using a static array to keep track of saved states.
+- **Prototype:** `char *get_next_line(int fd);`
+- **Usage Example:**
+  ```c
+  #include <fcntl.h>
+  #include <stdio.h>
+
+  int main() {
+    int fd = open("example.txt", O_RDONLY);
+    char *line;
+
+    if (fd < 0) {
+      perror("Failed to open file");
+      return 1;
+    }
+
+    while ((line = get_next_line(fd)) != NULL) {
+      printf("%s", line);
+      free(line);
+    }
+
+    close(fd);
     return 0;
   }
   ```
